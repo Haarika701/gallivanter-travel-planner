@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   resources :trips
   resources :favorites
   resources :things_to_dos
-  resources :places
+  resources :places,only:[:index]
   resources :trip_planners
   resources :users ,only:[:create,:show]
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html

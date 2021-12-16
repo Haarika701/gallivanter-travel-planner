@@ -2,7 +2,7 @@ export default function Header({user, setUser}){
 
     function handleLogout(){
         console.log("Logging out")
-        fetch("/logout", {
+        fetch("/logout",{
             method: "DELETE"
         })
         .then(resp => resp.json())
