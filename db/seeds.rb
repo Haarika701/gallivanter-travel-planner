@@ -8,9 +8,9 @@ ThingsToDo.destroy_all
 TripPlanner.destroy_all
  puts"Seeding started..."
 
-first=User.create(first_name:"Haarika",last_name:"Ramadugu",city:"San Jose",image:"https://st3.depositphotos.com/6672868/13701/v/600/depositphotos_137014128-stock-illustration-user-profile-icon.jpg",username: "haarika_r",email: "hramadugu@gmail.com",password_digest:"12345asd")
-second=User.create(first_name:"Raj",last_name:"Bhatla",city:"San Jose",image:"https://st3.depositphotos.com/6672868/13701/v/600/depositphotos_137014128-stock-illustration-user-profile-icon.jpg",username: "raj",email:"nrmadhu999@gmail.com",password_digest:"12345lsd")
-third=User.create(first_name:"Ruchi",last_name:"Yevle",city:"Vadodara",image:"https://st3.depositphotos.com/6672868/13701/v/600/depositphotos_137014128-stock-illustration-user-profile-icon.jpg",username: "ruchi",email:"yevleru@gmail.com",password_digest:"12345fgh")
+first=User.create(first_name:"Haarika",last_name:"Ramadugu",city:"San Jose",image:"https://st3.depositphotos.com/6672868/13701/v/600/depositphotos_137014128-stock-illustration-user-profile-icon.jpg",username: "haarika_r",email: "hramadugu@gmail.com",password:"12345asd")
+second=User.create(first_name:"Raj",last_name:"Bhatla",city:"San Jose",image:"https://st3.depositphotos.com/6672868/13701/v/600/depositphotos_137014128-stock-illustration-user-profile-icon.jpg",username: "raj",email:"nrmadhu999@gmail.com",password:"12345lsd")
+third=User.create(first_name:"Ruchi",last_name:"Yevle",city:"Vadodara",image:"https://st3.depositphotos.com/6672868/13701/v/600/depositphotos_137014128-stock-illustration-user-profile-icon.jpg",username: "ruchi",email:"yevleru@gmail.com",password:"12345fgh")
 
 
 
