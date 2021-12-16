@@ -1,0 +1,35 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  plan_name: MyString
+  destination: MyString
+  hotel_name: MyString
+  hotel_address: MyString
+  hotel_checkin: 2021-12-15 12:34:08
+  hotel_checkout: 2021-12-15 12:34:08
+  flight_name: MyString
+  flight_number: 1
+  flight_to: MyString
+  flight_from: MyString
+  trip_activities: MyString
+  trip_start: 2021-12-15 12:34:08
+  trip_end: 2021-12-15 12:34:08
+  notes: MyString
+
+two:
+  user: two
+  plan_name: MyString
+  destination: MyString
+  hotel_name: MyString
+  hotel_address: MyString
+  hotel_checkin: 2021-12-15 12:34:08
+  hotel_checkout: 2021-12-15 12:34:08
+  flight_name: MyString
+  flight_number: 1
+  flight_to: MyString
+  flight_from: MyString
+  trip_activities: MyString
+  trip_start: 2021-12-15 12:34:08
+  trip_end: 2021-12-15 12:34:08
+  notes: MyString
