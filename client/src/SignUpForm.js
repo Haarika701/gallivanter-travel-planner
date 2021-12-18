@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Error from "./Errors";
 
+ 
 export default function SignupForm( {setUser, handleFormDisplay} ) {
     const [errors, setErrors] = useState([]);
     const [formData, setFormData] = useState({
@@ -57,23 +58,29 @@ export default function SignupForm( {setUser, handleFormDisplay} ) {
   }
 
   return (
-     <div>
-        <form className = "signup-login-form" onSubmit={handleSubmit}>
-        <fieldset>
+     <div class="ui form">
+      
+        <form  class="signup-form" onSubmit={handleSubmit}>
+        
         <legend>Sign up for an account:</legend>
 
         {errors.map((err) => (<Error key={err}>{err}</Error>))}
-
-            <label htmlFor="first_name">First Name:</label>
+        
+        <label>First Name</label>
+        <div className="ui input">
             <input
                 id="first_name-signup-input"
                 type="text"
+                placeholder="First Name"
                 name="first_name"
                 value={formData.first_name}
                 onChange={handleChange}
             />
+         </div>
             <br/>
+            
             <label htmlFor="last_name">Last Name:</label>
+            <div className="ui input">
             <input
                 id="last_name-signup-input"
                 type="text"
@@ -81,9 +88,11 @@ export default function SignupForm( {setUser, handleFormDisplay} ) {
                 value={formData.last_name}
                 onChange={handleChange}
             />
+            </div>
             <br/>
-
+            
             <label htmlFor="city">City:</label>
+            <div className="ui input">
             <input
                 id="city-signup-input"
                 type="text"
@@ -91,8 +100,11 @@ export default function SignupForm( {setUser, handleFormDisplay} ) {
                 value={formData.city}
                 onChange={handleChange}
             />
+            </div>
             <br/>
+           
             <label htmlFor="image">Profile Picture:</label>
+            <div className="ui input">
             <input
                 id="image-signup-input"
                 type="text"
@@ -100,9 +112,12 @@ export default function SignupForm( {setUser, handleFormDisplay} ) {
                 value={formData.image}
                 onChange={handleChange}
             />
+            </div>
             <br/>
-
+           
+            
             <label htmlFor="username">Username:</label>
+            <div className="ui input">
             <input
                 id="username-signup-input"
                 type="text"
@@ -110,8 +125,12 @@ export default function SignupForm( {setUser, handleFormDisplay} ) {
                 value={formData.username}
                 onChange={handleChange}
             />
+            </div>
+            
             <br/>
+            
             <label htmlFor="email">Email:</label>
+            <div className="ui input">
             <input
                 id="email-signup-input"
                 type="text"
@@ -119,8 +138,10 @@ export default function SignupForm( {setUser, handleFormDisplay} ) {
                 value={formData.email}
                 onChange={handleChange}
             />
+            </div>
            <br/>
             <label htmlFor="password">Password:</label>
+            <div className="ui input">
             <input
                 className="password-signup-input"
                 type="password"
@@ -128,8 +149,10 @@ export default function SignupForm( {setUser, handleFormDisplay} ) {
                 value={formData.password}
                 onChange={handleChange}
             />
+            </div>
             <br/>
             <label htmlFor="password_confirmation">Confirm Password:</label>
+            <div className="ui input">
             <input
                 className="password-signup-input"
                 type="password"
@@ -137,9 +160,10 @@ export default function SignupForm( {setUser, handleFormDisplay} ) {
                 value={formData.password_confirmation}
                 onChange={handleChange}
             />
+            </div>
             <br/>
-            <button type="submit">Sign Up</button>
-        </fieldset>
+            <button variant="outlined" type="submit">Sign Up</button>
+      
         </form>
         <h3>Already have an account? <button onClick = {handleFormDisplay}>Log In Now!</button></h3>
     </div> 

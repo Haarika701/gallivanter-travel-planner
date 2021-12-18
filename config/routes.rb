@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :favorites
   resources :things_to_dos
   resources :places,only:[:index]
-  resources :trip_planners
+  resources :trip_planners,only:[:index,:create]
   resources :users ,only:[:create,:show]
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   post '/login', to: 'sessions#create'

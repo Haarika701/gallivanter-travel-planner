@@ -1,20 +1,17 @@
+import { useState } from "react"
 
  function DestinationCard({destinations:{city,state,country}}){
     
+    // const [showThings,setShowThings] = useState([])
     
     return (
         <div>
         <h3>
-            City:{city}
+            {city}
         </h3>
-        <h3>
-            State:{state}
-        </h3>
-  
-        <h3>
-            Country:{country}
-        </h3>
-         
+        <h5>
+           {state},{country}
+        </h5>
          <br/>
         </div>
     )

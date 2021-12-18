@@ -16,8 +16,8 @@ class ApplicationController < ActionController::API
       #   render json: { errors: ["Item not found"] }, status: :not_found
       # end
     
-      def record_invalid (invalid)
-        render json: { errors: [invalid.record.errors.full_messages]}, status: :unprocessable_entity
-      end
+      # def record_invalid (invalid)
+      #   render json: { errors: [invalid.record.errors.full_messages]}, status: :unprocessable_entity
+      # end
     
 end

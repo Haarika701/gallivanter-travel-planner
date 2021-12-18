@@ -47,14 +47,12 @@ export default function LoginForm ( {setUser, handleFormDisplay} ) {
   
     return (
       <div>
-      
           <form className = "signup-login-form" onSubmit={handleSubmit}>
-          <fieldset>
           <legend>Log into your account:</legend>
-
           {errors.map((err) => (<Error key={err}>{err}</Error>))}
 
           <label htmlFor="username">Username:</label>
+          <div class="ui input">
           <input
               id="username-login-input"
               type="text"
@@ -62,8 +60,10 @@ export default function LoginForm ( {setUser, handleFormDisplay} ) {
               value={formData.username}
               onChange={handleChange}
           />
+          </div>
           <br/>
           <label htmlFor="password">Password:</label>
+          <div class="ui input">
           <input
               id="password-login-input"
               type="password"
@@ -71,10 +71,11 @@ export default function LoginForm ( {setUser, handleFormDisplay} ) {
               value={formData.password}
               onChange={handleChange}
           />
+          </div>
            <br/>
-          <button type="submit">Sign In</button><br></br>
-          </fieldset>
-          <h3>Don't have an account yet? <button onClick = {handleFormDisplay}>Sign Up Now!</button></h3>
+          <button class="ui primary button"type="submit">Sign In</button><br></br>
+        
+          <h3>Don't have an account yet? <button className="medium ui button" onClick = {handleFormDisplay}>Sign Up Now!</button></h3>
           </form>
       </div>
     );

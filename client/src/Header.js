@@ -1,3 +1,6 @@
+
+
+
 export default function Header({user, setUser}){
 
     function handleLogout(){
@@ -11,7 +14,9 @@ export default function Header({user, setUser}){
 return(
     <div>
             <h2>Gallivanter : A Travel Planner</h2>
-            {user ? <button onClick = {handleLogout}>Logout!</button> : null}
+            {user ?   <button onClick = {handleLogout}>Logout!</button> : null}
+         
+           
     </div>
 )
 }

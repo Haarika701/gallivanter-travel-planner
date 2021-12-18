@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react"
-import DestinationCard from "./DestinationCard"
 import DestinationView from "./Destinationview"
+import { Switch,Route} from "react-router-dom"
 
-export default function DestinationContainer(){
+export default function DestinationContainer({user}){
 
     const[allDestination,setAllDestination]= useState([])
 
@@ -20,8 +20,18 @@ export default function DestinationContainer(){
     return (
         <div>
             
-            <DestinationView allDestination= {allDestination} />
-            
+           
+            <Switch> 
+             <Route exact path= "/places">
+             <DestinationView allDestination= {allDestination} />
+             </Route>
+             <Route exact path="/trips">
+             </Route> 
+             
+             </Switch>
+             
+           
+              
         </div>
     )
 }
