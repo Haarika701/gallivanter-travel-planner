@@ -1,5 +1,7 @@
 import React, {useState} from "react"
- import Error from "./Errors";
+import Error from "./Errors";
+import Button from '@mui/material/Button';
+import { FormControl } from "@mui/material";
 
 export default function LoginForm ( {setUser, handleFormDisplay} ) {
   const [errors, setErrors] = useState([]);
@@ -46,13 +48,12 @@ export default function LoginForm ( {setUser, handleFormDisplay} ) {
   
   
     return (
-      <div>
+     
           <form className = "signup-login-form" onSubmit={handleSubmit}>
-          <legend>Log into your account:</legend>
+          <h4>Log into your account:</h4><hr/>
           {errors.map((err) => (<Error key={err}>{err}</Error>))}
 
           <label htmlFor="username">Username:</label>
-          <div class="ui input">
           <input
               id="username-login-input"
               type="text"
@@ -60,10 +61,9 @@ export default function LoginForm ( {setUser, handleFormDisplay} ) {
               value={formData.username}
               onChange={handleChange}
           />
-          </div>
           <br/>
+
           <label htmlFor="password">Password:</label>
-          <div class="ui input">
           <input
               id="password-login-input"
               type="password"
@@ -71,13 +71,14 @@ export default function LoginForm ( {setUser, handleFormDisplay} ) {
               value={formData.password}
               onChange={handleChange}
           />
-          </div>
+         
            <br/>
-          <button class="ui primary button"type="submit">Sign In</button><br></br>
+          <Button variant="contained" size="medium" type="submit">Sign In</Button><br></br>
         
-          <h3>Don't have an account yet? <button className="medium ui button" onClick = {handleFormDisplay}>Sign Up Now!</button></h3>
+          <h4>Don't have an account yet? <Button variant="contained" color="success"className="medium ui button" onClick = {handleFormDisplay}>Sign Up Now!</Button></h4>
+        
           </form>
-      </div>
+    
     );
 
 }

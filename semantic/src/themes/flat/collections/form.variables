@@ -13,7 +13,7 @@
 /* Field */
 @fieldMargin: 0em 0em 1em;
 
-/* Form Label */
+/* label */
 @labelFontSize: @relative11px;
 @labelTextTransform: uppercase;
 

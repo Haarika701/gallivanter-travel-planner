@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import Error from "./Errors";
+import { Button,InputLabel,FormControl } from "@mui/material"
 
- 
+
 export default function SignupForm( {setUser, handleFormDisplay} ) {
     const [errors, setErrors] = useState([]);
     const [formData, setFormData] = useState({
@@ -58,16 +59,13 @@ export default function SignupForm( {setUser, handleFormDisplay} ) {
   }
 
   return (
-     <div class="ui form">
-      
-        <form  class="signup-form" onSubmit={handleSubmit}>
-        
-        <legend>Sign up for an account:</legend>
-
+    <div >
+        < form  className="signup-form" onSubmit={handleSubmit}>
+        <h4>Sign up for an account:</h4>
         {errors.map((err) => (<Error key={err}>{err}</Error>))}
         
-        <label>First Name</label>
-        <div className="ui input">
+        <label variant="outlined" htmlFor="first">First Name</label>
+        
             <input
                 id="first_name-signup-input"
                 type="text"
@@ -76,11 +74,11 @@ export default function SignupForm( {setUser, handleFormDisplay} ) {
                 value={formData.first_name}
                 onChange={handleChange}
             />
-         </div>
+        
             <br/>
-            
-            <label htmlFor="last_name">Last Name:</label>
-            <div className="ui input">
+           
+            <label variant="outlined" htmlFor="last_name">Last Name:</label>
+           
             <input
                 id="last_name-signup-input"
                 type="text"
@@ -88,11 +86,10 @@ export default function SignupForm( {setUser, handleFormDisplay} ) {
                 value={formData.last_name}
                 onChange={handleChange}
             />
-            </div>
+           
             <br/>
             
-            <label htmlFor="city">City:</label>
-            <div className="ui input">
+            <label  variant="outlined" htmlFor="city">City:</label>
             <input
                 id="city-signup-input"
                 type="text"
@@ -100,11 +97,11 @@ export default function SignupForm( {setUser, handleFormDisplay} ) {
                 value={formData.city}
                 onChange={handleChange}
             />
-            </div>
+            
             <br/>
            
-            <label htmlFor="image">Profile Picture:</label>
-            <div className="ui input">
+            <label variant="outlined" htmlFor="image">Profile Picture:</label>
+           
             <input
                 id="image-signup-input"
                 type="text"
@@ -112,12 +109,8 @@ export default function SignupForm( {setUser, handleFormDisplay} ) {
                 value={formData.image}
                 onChange={handleChange}
             />
-            </div>
             <br/>
-           
-            
-            <label htmlFor="username">Username:</label>
-            <div className="ui input">
+            <label  variant="outlined" htmlFor="username">Username:</label>
             <input
                 id="username-signup-input"
                 type="text"
@@ -125,12 +118,9 @@ export default function SignupForm( {setUser, handleFormDisplay} ) {
                 value={formData.username}
                 onChange={handleChange}
             />
-            </div>
-            
             <br/>
             
-            <label htmlFor="email">Email:</label>
-            <div className="ui input">
+            <label  variant="outlined" htmlFor="email">Email:</label>
             <input
                 id="email-signup-input"
                 type="text"
@@ -138,10 +128,9 @@ export default function SignupForm( {setUser, handleFormDisplay} ) {
                 value={formData.email}
                 onChange={handleChange}
             />
-            </div>
            <br/>
-            <label htmlFor="password">Password:</label>
-            <div className="ui input">
+           
+            <label variant="outlined" htmlFor="password">Password:</label>
             <input
                 className="password-signup-input"
                 type="password"
@@ -149,10 +138,9 @@ export default function SignupForm( {setUser, handleFormDisplay} ) {
                 value={formData.password}
                 onChange={handleChange}
             />
-            </div>
             <br/>
-            <label htmlFor="password_confirmation">Confirm Password:</label>
-            <div className="ui input">
+            <label  variant="outlined" htmlFor="password_confirmation">Confirm Password:</label>
+            
             <input
                 className="password-signup-input"
                 type="password"
@@ -160,12 +148,16 @@ export default function SignupForm( {setUser, handleFormDisplay} ) {
                 value={formData.password_confirmation}
                 onChange={handleChange}
             />
-            </div>
+           
             <br/>
-            <button variant="outlined" type="submit">Sign Up</button>
-      
+         
+            <Button variant = "contained"  type="submit">Sign Up</Button>
+            
         </form>
-        <h3>Already have an account? <button onClick = {handleFormDisplay}>Log In Now!</button></h3>
-    </div> 
+        <h4>Already have an account? <Button variant="contained"  onClick = {handleFormDisplay}>Log In Now!</Button></h4>
+
+        </div>
+        
   );
 };
+

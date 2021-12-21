@@ -2,24 +2,30 @@
 import { Switch,Route} from "react-router-dom"
 import TripplannerCard  from "./TripplannerCard"
 import TripPlannerForm from "./TripPlannerForm"
+import {Button} from "@mui/material"
 import { useState } from "react"
 function TripPlannerview({user}){
-//    const [showForm,setShowForm] = useState(true)
+    const [showForm,setShowForm] = useState(true)
+    
+    function handleForm(){
+     setShowForm(showForm => !showForm)
+    
+     console.log("Button is clicked..")
+    
+    }
 
-//    function handleForm(){
-//        setShowForm(showForm => !showForm)
-//        console.log("Button is clicked..")
+   
    
     return (
-        <div>
+        <div class = "tripplanner-view">
            
            <Switch>
                     <Route exact path= "/tripplanner">
-                        <TripPlannerForm user={user} />
+                      { showForm ?
+                          <Button onClick = {handleForm}>Create New Plan Form</Button>:<Button onClick = {handleForm}>Hide Create New Plan Form</Button> }  
 
-              {/* { showForm ?         
-               <button onClick={handleForm}>Show Form</button> :
-               <button onClick={handleForm}>Hide Form</button> } */}
+                      {showForm ?<TripPlannerForm user={user}/> : null}  
+                        
                         <TripplannerCard user={user}/>    
                     </Route>
            </Switch> 

@@ -23,9 +23,11 @@ export default function Home(){
 
     return(
         <div>
+           
            <Header user = {user} setUser = {setUser}/>
            <NavBar/> 
            <TripPlannerview/>
+           
 
            {
                 user ? 

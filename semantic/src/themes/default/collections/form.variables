@@ -19,7 +19,7 @@
 /* Fields */
 @fieldsMargin: 0 -(@gutterWidth / 2) @rowDistance;
 
-/* Form Label */
+/* label */
 @labelDistance: @4px;
 @labelMargin: 0 0 @labelDistance 0;
 @labelFontSize: @relativeSmall;

@@ -1,11 +1,12 @@
+import { Button, InputLabel,Grid,Item} from "@mui/material";
 import React, {  useState } from "react";
 import Error from "./Errors";
-import Button from 'react-bootstrap/Button';
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
-import Form from 'react-bootstrap/Form'
+
+
 
 export default function TripPlannerForm(){
+
+    
     const [errors, setErrors] = useState([]);
     const [formData, setFormData] = useState({
     user_id: "",
@@ -21,6 +22,9 @@ export default function TripPlannerForm(){
     trip_end:"",
     notes:""
   });
+
+
+  
 
   const handleChange = (e) => {
     setFormData({
@@ -73,13 +77,15 @@ export default function TripPlannerForm(){
   }
 
     return (
+       
+        <form  className="travelplanner" onSubmit={handleSubmit}>
         
-        <Form  onSubmit={handleSubmit}>
-        <Row className="mb-3">
-          <Col  xs={7} xs = "auto">
+         
+         
         {errors.map((err) => (<Error key={err}>{err}</Error>))}
-        
-         <Form.Label htmlFor="user_id">Id:</Form.Label>
+        <legend>Trip Details</legend>
+        <fieldset>
+         <InputLabel htmlFor="user_id">Id:</InputLabel>
             <input
                 className="user_id-plan-input"
                 type="integer"  class="form-control"
@@ -88,9 +94,9 @@ export default function TripPlannerForm(){
             />
         
           <br/>
-          </Col>
-          <Col>
-            <Form.Label htmlFor="plan_name">Plan Name:</Form.Label>
+        
+          
+            <InputLabel htmlFor="plan_name">Plan Name:</InputLabel>
             <input
                 id="plan_name-input"
                 type="text"  class="form-control"
@@ -98,11 +104,11 @@ export default function TripPlannerForm(){
                 value={formData.plan_name}
                 onChange={handleChange}
             />
-           </Col>
+          
             
             <br/>
-            <Col>
-            <Form.Label htmlFor="destination">Destination:</Form.Label>
+           
+            <InputLabel htmlFor="destination">Destination:</InputLabel>
             <input
                 id="last_name-signup-input"
                 type="text"  class="form-control"
@@ -110,98 +116,9 @@ export default function TripPlannerForm(){
                 value={formData.destination}
                 onChange={handleChange}
             />
-           </Col>
+         
             <br/>
-            <Col>
-            <Form.Label htmlFor="hotel_name">Hotel Name:</Form.Label>
-            <input
-                id="hotel-plan-input"
-                type="text"  class="form-control"
-                name="hotel_name"
-                value={formData.city}
-                onChange={handleChange}
-            />
-           </Col>
-            <br/>
-        
-            <Form.Label htmlFor="hotel_address"> Hotel Address:</Form.Label>
-            <input
-                id="hotel_address-plan-input"
-                type="text"  class="form-control"
-                name="hotel_address"
-                value={formData.hotel_address}
-                onChange={handleChange}
-            />
-          
-            <br/>
-           <Col>
-            <Form.Label htmlFor="hotel_checkin">Hotel Checkin Date:</Form.Label>
-            <input
-                id="hotel_checkin-signup-input"
-                type="date"  class="form-control"
-                name="hotel_checkin"
-                value={formData.hotel_checkin}
-                onChange={handleChange}
-            />
-          </Col>
-            <br/>
-            <Col xs = "auto">
-             <Form.Label htmlFor="hotel_checkout">Hotel Checkout Date: </Form.Label>
-            <input
-                id="email-signup-input"
-                type="date"  class="form-control"
-                name="hotel_checkout"
-                value={formData.hotel_checkout}
-                onChange={handleChange}
-            />
-            </Col>
-           <br/>
-           <Col >
-            <Form.Label htmlFor="flight_name">Flight Name:</Form.Label>
-            <input
-                className="flight-plan-input"
-                type="text"  class="form-control"
-                name="flight_name"
-                value={formData.flight_name}
-                onChange={handleChange}
-            />
-            </Col>
-            <br/>
-            <Col>
-            <Form.Label htmlFor="flight_number">Flight Number:</Form.Label>
-            <input
-                className="flightnumber-plan-input"
-                type="number"  class="form-control"
-                name="flight_number"
-                value={formData.flight_number}
-                onChange={handleChange}
-            />
-          </Col>
-            <br/>
-             <Col>
-            <Form.Label htmlFor="flight_to">Flight To:</Form.Label>
-            <input
-                className="flighto-plan-input"
-                type="text"  class="form-control"
-                name="flight_to"
-                value={formData.flight_to}
-                onChange={handleChange}
-            />
-              </Col> 
-              <br/>
-             <Col>
-            <Form.Label htmlFor="flight_from">Flight From:</Form.Label>
-            <input
-                className="flighfrom-plan-input"
-                type="text"  class="form-control"
-                name="flight_from"
-                value={formData.flight_from}
-                onChange={handleChange}
-            />
-           </Col>
-            <br/>
-           
-            <Form.Label htmlFor="trip_activities">Trip Activities:</Form.Label>
+            <InputLabel htmlFor="trip_activities">Trip Activities:</InputLabel>
             <input
                 className="activities-plan-input"
                 type="text"  class="form-control"
@@ -211,8 +128,8 @@ export default function TripPlannerForm(){
             />
            
             <br/>
-            <Col>
-            <Form.Label htmlFor="trip_start">Trip Start:</Form.Label>
+           
+            <InputLabel htmlFor="trip_start">Trip Start:</InputLabel>
             <input
                 className="tripstart-plan-input"
                 type="date"  class="form-control"
@@ -220,10 +137,10 @@ export default function TripPlannerForm(){
                 value={formData.trip_start}
                 onChange={handleChange}
             />
-           </Col>
+          
             <br/>
-            <Col>
-            <Form.Label htmlFor="trip_end">Trip End:</Form.Label>
+        
+            <InputLabel htmlFor="trip_end">Trip End:</InputLabel>
             <input
                 className="tripend-plan-input"
                 type="date"  class="form-control"
@@ -231,22 +148,119 @@ export default function TripPlannerForm(){
                 value={formData.trip_end}
                 onChange={handleChange}
             />
-           </Col>
+           </fieldset>
+            <br/>
+           <legend>Hotel Details</legend>
+            <fieldset>
+            <InputLabel htmlFor="hotel_name">Hotel Name:</InputLabel>
+            <input
+                id="hotel-plan-input"
+                type="text"  class="form-control"
+                name="hotel_name"
+                value={formData.city}
+                onChange={handleChange}
+            />
+           
+            <br/>
+        
+            <InputLabel htmlFor="hotel_address"> Hotel Address:</InputLabel>
+            <input
+                id="hotel_address-plan-input"
+                type="text"  class="form-control"
+                name="hotel_address"
+                value={formData.hotel_address}
+                onChange={handleChange}
+            />
+          
+            <br/>
+           
+            <InputLabel htmlFor="hotel_checkin">Hotel Checkin Date:</InputLabel>
+            <input
+                id="hotel_checkin-signup-input"
+                type="date"  class="form-control"
+                name="hotel_checkin"
+                value={formData.hotel_checkin}
+                onChange={handleChange}
+            />
+          
             <br/>
             
-            <Form.Label htmlFor="notes">Notes:</Form.Label>
+             <InputLabel htmlFor="hotel_checkout">Hotel Checkout Date: </InputLabel>
+            <input
+                id="email-signup-input"
+                type="date"  class="form-control"
+                name="hotel_checkout"
+                value={formData.hotel_checkout}
+                onChange={handleChange}
+            />
+          
+           <br/>
+           </fieldset>
+           <br/>
+          <legend>Flight Details</legend>
+
+         <fieldset>
+
+            <InputLabel htmlFor="flight_name">Flight Name:</InputLabel>
+            <input
+                className="flight-plan-input"
+                type="text"  class="form-control"
+                name="flight_name"
+                value={formData.flight_name}
+                onChange={handleChange}
+            />
+           
+            <br/>
+          
+            <InputLabel htmlFor="flight_number">Flight Number:</InputLabel>
+            <input
+                className="flightnumber-plan-input"
+                type="number"  class="form-control"
+                name="flight_number"
+                value={formData.flight_number}
+                onChange={handleChange}
+            />
+          
+            <br/>
+             
+            <InputLabel htmlFor="flight_to">Flight To:</InputLabel>
+            <input
+                className="flighto-plan-input"
+                type="text"  class="form-control"
+                name="flight_to"
+                value={formData.flight_to}
+                onChange={handleChange}
+            />
+             
+              <br/>
+             
+            <InputLabel htmlFor="flight_from">Flight From:</InputLabel>
+            <input
+                className="flighfrom-plan-input"
+                type="text"  class="form-control"
+                name="flight_from"
+                value={formData.flight_from}
+                onChange={handleChange}
+            />
+         
+            <br/>
+         
+           
+           
+            <InputLabel htmlFor="notes">Notes:</InputLabel>
+           
             <input
                 className="notes-plan-input"
                 type="notes"  class="form-control"
                 name="notes"
-                value={formData.notes}
+                defaultValue={formData.notes}
                 onChange={handleChange}
             />
-            <Col xs = "auto">
-            <Button variant="primary" type="submit" >Save Plan</Button>
-            </Col>
-           </Row>
-            </Form>
+           </fieldset>
+           <br/>
+            <Button variant="contained" type="submit" >Save Plan</Button>
+          
+            </form>
         
         
     )

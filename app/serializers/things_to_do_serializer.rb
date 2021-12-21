@@ -1,4 +1,4 @@
 class ThingsToDoSerializer < ActiveModel::Serializer
-  attributes :id, :description, :reviews, :category, :expense, :rating, :image
+  attributes :id, :description,  :category, :expense, :rating, :image,:name
   has_one :place
 end

@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 2021_12_15_203740) do
     t.string "city"
     t.string "state"
     t.string "country"
+    t.string "image"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -37,7 +38,7 @@ ActiveRecord::Schema.define(version: 2021_12_15_203740) do
     t.string "description"
     t.string "category"
     t.string "expense"
-    t.integer "rating"
+    t.float "rating"
     t.string "image"
     t.string "name"
     t.datetime "created_at", precision: 6, null: false

@@ -5,7 +5,7 @@ class CreateThingsToDos < ActiveRecord::Migration[6.1]
       t.string :description
       t.string :category
       t.string :expense
-      t.integer :rating
+      t.float :rating
       t.string :image
       t.string :name
       t.timestamps
