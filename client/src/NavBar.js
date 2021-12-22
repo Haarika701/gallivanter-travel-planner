@@ -7,11 +7,16 @@ function NavBar(){
 
     return(
       <>
-      <Link to = "/tripplanner">Trip Planner</Link>  
+      <div className="tripplanner-link">
+      <Link to = "/tripplanner">Trip Planner</Link> 
+      </div>
+      <div className="navbar">
        <ul>
         <Link to ="/places">Places</Link>
          <Link to ="/trips">Trips</Link> 
+         
        </ul>
+       </div> 
        </>
     )
     

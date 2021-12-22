@@ -1,11 +1,8 @@
 import { useEffect, useState } from "react"
 import DestinationView from "./Destinationview"
 import { Switch,Route} from "react-router-dom"
-
+import ThingsToDoRender from "./ThingsToDoRender"
 import DestinationCard from "./DestinationCard"
-
-
-
 
 export default function DestinationContainer({user}){
 
@@ -36,7 +33,7 @@ export default function DestinationContainer({user}){
              </Route>
              <Route exact path="/trips">
              </Route> 
-             
+             <Route path="/places/:destinations" component={ThingsToDoRender} />
              </Switch>
              
            

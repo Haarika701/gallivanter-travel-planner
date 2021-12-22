@@ -16,7 +16,6 @@ useEffect(() => {
     return(
         <div>
            <h3>View your exisitng trips here</h3> 
-           
                  <TripplannerContainer showPlans={showPlans}/>
                 
            

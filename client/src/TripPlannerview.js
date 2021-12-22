@@ -22,7 +22,7 @@ function TripPlannerview({user}){
            <Switch>
                     <Route exact path= "/tripplanner">
                       { showForm ?
-                          <Button onClick = {handleForm}>Create New Plan Form</Button>:<Button onClick = {handleForm}>Hide Create New Plan Form</Button> }  
+                          <Button onClick = {handleForm}>Hide Create New Plan Form</Button>:<Button onClick = {handleForm}> Create New Plan Form</Button> }  
 
                       {showForm ?<TripPlannerForm user={user}/> : null}  
                         

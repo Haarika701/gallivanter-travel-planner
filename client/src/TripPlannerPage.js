@@ -1,7 +1,8 @@
-import {Button} from "@mui/material"
+import {Button,Card} from "@mui/material"
 export default function TripPlannerPage({plan:{plan_name,destination,trip_start,trip_end,trip_activities,hotel_name}}){
     return(
         <div>
+        <Card sx={{ maxWidth: 338 }}>
         <h3>Trip Name:{plan_name}</h3>
         <h3>Destination:{destination}</h3>
         <h3>Trip Started at:{trip_start}</h3>
@@ -11,6 +12,7 @@ export default function TripPlannerPage({plan:{plan_name,destination,trip_start,
         <Button variant="contained">Delete </Button>
         <Button variant="contained">Edit </Button>
         <hr/>
+        </Card>
         </div>
     )
 }
