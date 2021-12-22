@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import DestinationView from "./Destinationview"
 import { Switch,Route} from "react-router-dom"
 import ThingsToDoRender from "./ThingsToDoRender"
-import DestinationCard from "./DestinationCard"
+
 
 export default function DestinationContainer({user}){
 
@@ -24,9 +24,12 @@ export default function DestinationContainer({user}){
 
 
     return (
-        <div>
+        <>
+             <div className="user">
+             <img src = {user.image} alt = "user"/>
+            <h3>Hi,{user.username}!!</h3> 
             
-           
+            </div>
             <Switch> 
              <Route exact path= "/places">
              <DestinationView allDestination= {allDestination} user = {user}/>
@@ -38,6 +41,6 @@ export default function DestinationContainer({user}){
              
            
               
-        </div>
+        </>
     )
 }

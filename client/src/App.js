@@ -1,14 +1,40 @@
-import Home from "./Home";
+
 import './App.css'
+import TripPlannerview from "./TripPlannerview"
+import React, { useEffect, useState } from "react"
+import DestinationContainer from "./DestinationContainer"
+ import NavBar from "./NavBar"
+ import Header from "./Header"
+import LoginSignUp from "./LoginSignup"
 // import logo from "./logo.png"
 function App() {
+  const [user, setUser] = useState(null)
+    useEffect(()=> {
+        fetch("/me")
+        .then((res) => res.json())
+        .then((data) => {
+          if(!data.errors){
+            setUser(data)
+          }
+                
+              })
+    }, [])
+    if (!user) return <LoginSignUp setUser = {setUser} />
+     
+   
   return (
     <div className="App">
      {/* <img src = {logo}/> */}
        <h1>Gallivanter : A Travel Planner</h1>
-     {/* <img src="https://images.unsplash.com/photo-1534534573898-db5148bc8b0c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" ></img> */}
-      <Home/>
-     
+       <Header user = {user} setUser = {setUser}/>
+       <NavBar/> 
+      
+           {
+                user ? 
+                <DestinationContainer user = {user} /> : <LoginSignUp setUser = {setUser} />
+            }
+            <br/>
+             <TripPlannerview/>
     </div>
   );
 }
