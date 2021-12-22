@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import Error from "./Errors";
+import { Button,InputLabel,FormControl } from "@mui/material"
+
 
 export default function SignupForm( {setUser, handleFormDisplay} ) {
     const [errors, setErrors] = useState([]);
@@ -57,14 +59,13 @@ export default function SignupForm( {setUser, handleFormDisplay} ) {
   }
 
   return (
-     <div>
-        <form className = "signup-login-form" onSubmit={handleSubmit}>
-        <fieldset>
-        <legend>Sign up for an account:</legend>
-
+    <div >
+        <form  className="signup-form" onSubmit={handleSubmit}>
+        <h4>Sign up for an account</h4><hr/>
         {errors.map((err) => (<Error key={err}>{err}</Error>))}
-
-            <label htmlFor="first_name">First Name:</label>
+       
+        <label variant="outlined" htmlFor="first">First Name</label>
+        
             <input
                 id="first_name-signup-input"
                 type="text"
@@ -72,8 +73,11 @@ export default function SignupForm( {setUser, handleFormDisplay} ) {
                 value={formData.first_name}
                 onChange={handleChange}
             />
+        
             <br/>
-            <label htmlFor="last_name">Last Name:</label>
+           
+            <label variant="outlined" htmlFor="last_name">Last Name:</label>
+           
             <input
                 id="last_name-signup-input"
                 type="text"
@@ -81,9 +85,10 @@ export default function SignupForm( {setUser, handleFormDisplay} ) {
                 value={formData.last_name}
                 onChange={handleChange}
             />
+           
             <br/>
-
-            <label htmlFor="city">City:</label>
+            
+            <label  variant="outlined" htmlFor="city">City:</label>
             <input
                 id="city-signup-input"
                 type="text"
@@ -91,8 +96,11 @@ export default function SignupForm( {setUser, handleFormDisplay} ) {
                 value={formData.city}
                 onChange={handleChange}
             />
+            
             <br/>
-            <label htmlFor="image">Profile Picture:</label>
+           
+            <label variant="outlined" htmlFor="image">Profile Picture:</label>
+           
             <input
                 id="image-signup-input"
                 type="text"
@@ -101,8 +109,7 @@ export default function SignupForm( {setUser, handleFormDisplay} ) {
                 onChange={handleChange}
             />
             <br/>
-
-            <label htmlFor="username">Username:</label>
+            <label  variant="outlined" htmlFor="username">Username:</label>
             <input
                 id="username-signup-input"
                 type="text"
@@ -111,7 +118,8 @@ export default function SignupForm( {setUser, handleFormDisplay} ) {
                 onChange={handleChange}
             />
             <br/>
-            <label htmlFor="email">Email:</label>
+            
+            <label  variant="outlined" htmlFor="email">Email:</label>
             <input
                 id="email-signup-input"
                 type="text"
@@ -120,7 +128,8 @@ export default function SignupForm( {setUser, handleFormDisplay} ) {
                 onChange={handleChange}
             />
            <br/>
-            <label htmlFor="password">Password:</label>
+           
+            <label variant="outlined" htmlFor="password">Password:</label>
             <input
                 className="password-signup-input"
                 type="password"
@@ -129,7 +138,8 @@ export default function SignupForm( {setUser, handleFormDisplay} ) {
                 onChange={handleChange}
             />
             <br/>
-            <label htmlFor="password_confirmation">Confirm Password:</label>
+            <label  variant="outlined" htmlFor="password_confirmation">Confirm Password:</label>
+            
             <input
                 className="password-signup-input"
                 type="password"
@@ -137,11 +147,17 @@ export default function SignupForm( {setUser, handleFormDisplay} ) {
                 value={formData.password_confirmation}
                 onChange={handleChange}
             />
+           
             <br/>
-            <button type="submit">Sign Up</button>
-        </fieldset>
+         
+            <Button variant = "contained"  type="submit">Sign Up</Button>
+            
         </form>
-        <h3>Already have an account? <button onClick = {handleFormDisplay}>Log In Now!</button></h3>
-    </div> 
+       
+        <h4>Already have an account? <Button variant="contained"  onClick = {handleFormDisplay}>Log In Now!</Button></h4>
+       
+        </div>
+        
   );
 };
+

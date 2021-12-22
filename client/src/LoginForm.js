@@ -1,5 +1,7 @@
 import React, {useState} from "react"
- import Error from "./Errors";
+import Error from "./Errors";
+import Button from '@mui/material/Button';
+import { FormControl } from "@mui/material";
 
 export default function LoginForm ( {setUser, handleFormDisplay} ) {
   const [errors, setErrors] = useState([]);
@@ -46,12 +48,9 @@ export default function LoginForm ( {setUser, handleFormDisplay} ) {
   
   
     return (
-      <div>
-      
+     
           <form className = "signup-login-form" onSubmit={handleSubmit}>
-          <fieldset>
-          <legend>Log into your account:</legend>
-
+          <h4>Log into your account</h4><hr/>
           {errors.map((err) => (<Error key={err}>{err}</Error>))}
 
           <label htmlFor="username">Username:</label>
@@ -63,6 +62,7 @@ export default function LoginForm ( {setUser, handleFormDisplay} ) {
               onChange={handleChange}
           />
           <br/>
+
           <label htmlFor="password">Password:</label>
           <input
               id="password-login-input"
@@ -71,12 +71,14 @@ export default function LoginForm ( {setUser, handleFormDisplay} ) {
               value={formData.password}
               onChange={handleChange}
           />
+         
            <br/>
-          <button type="submit">Sign In</button><br></br>
-          </fieldset>
-          <h3>Don't have an account yet? <button onClick = {handleFormDisplay}>Sign Up Now!</button></h3>
+          <Button variant="contained" size="medium" type="submit">Sign In</Button><br></br>
+        
+          <h4>Don't have an account yet? <Button variant="contained" color="success"className="medium ui button" onClick = {handleFormDisplay}>Sign Up Now!</Button></h4>
+        
           </form>
-      </div>
+    
     );
 
 }
