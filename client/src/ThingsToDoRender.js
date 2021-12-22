@@ -1,6 +1,5 @@
 import {useState,useEffect} from "react"
 import { useParams } from "react-router-dom"
-import {Route,Router} from "react-router-dom"
 import ThingsToDoView from "./ThingsToDoView"
 export default function ThingsToRender({city}){
 let {destinations} = useParams()
@@ -18,7 +17,7 @@ let {destinations} = useParams()
   
     return (
         
-        <div>
+        <div className="things-render">
         <ThingsToDoView allThings={allThings}/>
         </div>
     )

@@ -9,28 +9,18 @@ function TripPlannerview({user}){
     
     function handleForm(){
      setShowForm(showForm => !showForm)
-    
      console.log("Button is clicked..")
-    
     }
-
-   
-   
     return (
         <div class = "tripplanner-view">
-           
            <Switch>
                     <Route exact path= "/tripplanner">
                       { showForm ?
-                          <Button onClick = {handleForm}>Hide Create New Plan Form</Button>:<Button onClick = {handleForm}> Create New Plan Form</Button> }  
-
+                          <Button  variant="dashed" sx={{ m: 1 }} onClick = {handleForm}>Hide Create New Plan Form</Button>:<Button  variant="dashed" sx={{ m: 1 }} onClick = {handleForm}> Create New Plan Form</Button> }
                       {showForm ?<TripPlannerForm user={user}/> : null}  
-                        
                         <TripplannerCard user={user}/>    
                     </Route>
            </Switch> 
-          
-           
         </div>
     )
 }

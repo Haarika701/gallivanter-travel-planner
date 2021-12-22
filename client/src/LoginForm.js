@@ -50,7 +50,7 @@ export default function LoginForm ( {setUser, handleFormDisplay} ) {
     return (
      
           <form className = "signup-login-form" onSubmit={handleSubmit}>
-          <h4>Log into your account:</h4><hr/>
+          <h4>Log into your account</h4><hr/>
           {errors.map((err) => (<Error key={err}>{err}</Error>))}
 
           <label htmlFor="username">Username:</label>

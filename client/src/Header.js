@@ -18,6 +18,7 @@ export default function Header({user, setUser,username}){
 return(
     
     <div class = "title">
+        <h1>Gallivanter : A Travel Planner</h1>
         {user ? <Button variant="contained"onClick = {handleLogout}>Logout!</Button> : null}  
     </div>
 )

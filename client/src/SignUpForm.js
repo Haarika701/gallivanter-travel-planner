@@ -60,16 +60,15 @@ export default function SignupForm( {setUser, handleFormDisplay} ) {
 
   return (
     <div >
-        < form  className="signup-form" onSubmit={handleSubmit}>
-        <h4>Sign up for an account:</h4>
+        <form  className="signup-form" onSubmit={handleSubmit}>
+        <h4>Sign up for an account</h4><hr/>
         {errors.map((err) => (<Error key={err}>{err}</Error>))}
-        
+       
         <label variant="outlined" htmlFor="first">First Name</label>
         
             <input
                 id="first_name-signup-input"
                 type="text"
-                placeholder="First Name"
                 name="first_name"
                 value={formData.first_name}
                 onChange={handleChange}
@@ -154,8 +153,9 @@ export default function SignupForm( {setUser, handleFormDisplay} ) {
             <Button variant = "contained"  type="submit">Sign Up</Button>
             
         </form>
+       
         <h4>Already have an account? <Button variant="contained"  onClick = {handleFormDisplay}>Log In Now!</Button></h4>
-
+       
         </div>
         
   );

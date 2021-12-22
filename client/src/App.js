@@ -25,7 +25,7 @@ function App() {
   return (
     <div className="App">
      {/* <img src = {logo}/> */}
-       <h1>Gallivanter : A Travel Planner</h1>
+       
        <Header user = {user} setUser = {setUser}/>
        <NavBar/> 
       

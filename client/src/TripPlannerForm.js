@@ -84,18 +84,14 @@ export default function TripPlannerForm(){
          
         {errors.map((err) => (<Error key={err}>{err}</Error>))}
         <legend>Trip Details</legend>
-        <fieldset>
-         <InputLabel htmlFor="user_id">Id:</InputLabel>
+         <InputLabel htmlFor="user_id">Plan Number</InputLabel>
             <input
                 className="user_id-plan-input"
                 type="integer"  class="form-control"
                 name="user_id"
                 onChange={handleChange}
             />
-        
           <br/>
-        
-          
             <InputLabel htmlFor="plan_name">Plan Name:</InputLabel>
             <input
                 id="plan_name-input"
@@ -104,10 +100,7 @@ export default function TripPlannerForm(){
                 value={formData.plan_name}
                 onChange={handleChange}
             />
-          
-            
             <br/>
-           
             <InputLabel htmlFor="destination">Destination:</InputLabel>
             <input
                 id="last_name-signup-input"
@@ -116,7 +109,6 @@ export default function TripPlannerForm(){
                 value={formData.destination}
                 onChange={handleChange}
             />
-         
             <br/>
             <InputLabel htmlFor="trip_activities">Trip Activities:</InputLabel>
             <input
@@ -126,9 +118,7 @@ export default function TripPlannerForm(){
                 value={formData.trip_activities}
                 onChange={handleChange}
             />
-           
             <br/>
-           
             <InputLabel htmlFor="trip_start">Trip Start:</InputLabel>
             <input
                 className="tripstart-plan-input"
@@ -137,9 +127,7 @@ export default function TripPlannerForm(){
                 value={formData.trip_start}
                 onChange={handleChange}
             />
-          
             <br/>
-        
             <InputLabel htmlFor="trip_end">Trip End:</InputLabel>
             <input
                 className="tripend-plan-input"
@@ -148,10 +136,8 @@ export default function TripPlannerForm(){
                 value={formData.trip_end}
                 onChange={handleChange}
             />
-           </fieldset>
             <br/>
            <legend>Hotel Details</legend>
-            <fieldset>
             <InputLabel htmlFor="hotel_name">Hotel Name:</InputLabel>
             <input
                 id="hotel-plan-input"
@@ -195,11 +181,11 @@ export default function TripPlannerForm(){
             />
           
            <br/>
-           </fieldset>
+           
            <br/>
           <legend>Flight Details</legend>
 
-         <fieldset>
+        
 
             <InputLabel htmlFor="flight_name">Flight Name:</InputLabel>
             <input
@@ -256,7 +242,7 @@ export default function TripPlannerForm(){
                 defaultValue={formData.notes}
                 onChange={handleChange}
             />
-           </fieldset>
+          
            <br/>
             <Button variant="contained" type="submit" >Save Plan</Button>
           

@@ -1,18 +1,28 @@
-import {Button,Card} from "@mui/material"
+import {Button,Card, CardContent, Typography} from "@mui/material"
 export default function TripPlannerPage({plan:{plan_name,destination,trip_start,trip_end,trip_activities,hotel_name}}){
     return(
-        <div>
+        <div className="tripplanner-card">
         <Card sx={{ maxWidth: 338 }}>
-        <h3>Trip Name:{plan_name}</h3>
-        <h3>Destination:{destination}</h3>
-        <h3>Trip Started at:{trip_start}</h3>
-        <h3>Trip Ended at:{trip_end}</h3>
-        <h3>Activities:{trip_activities}</h3>
-        <h3>Hotel Name:{hotel_name}</h3>
-        <Button variant="contained">Delete </Button>
-        <Button variant="contained">Edit </Button>
+        <CardContent>
+        <Typography gutterBottom variant = "h5">
+           {plan_name}
+        </Typography>
+        <Typography gutterBottom variant = "body">
+        Destination:{destination}
+        </Typography><br/>
+        <Typography gutterBottom variant = "body">
+        Trip Started at:{trip_start}<br/>
+        Trip Ended at:{trip_end}<br/>
+        
+        Activities:{trip_activities}<br/>
+        Hotel Name:{hotel_name}<br/>
+        </Typography>
+        </CardContent>
+        
         <hr/>
         </Card>
+        <Button variant="contained" size="small">Delete </Button>
+        <Button variant="contained" size = "small">Edit </Button>
         </div>
     )
 }

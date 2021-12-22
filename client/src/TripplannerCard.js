@@ -14,11 +14,9 @@ useEffect(() => {
 },[]);
 
     return(
-        <div>
+        <div class = "tripplanner-view">
            <h3>View your exisitng trips here</h3> 
                  <TripplannerContainer showPlans={showPlans}/>
-                
-           
         </div>
     )
 }

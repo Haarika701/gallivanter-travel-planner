@@ -3,18 +3,21 @@ font-family: 'Roboto Slab', serif;
 font-family: 'Zen Antique', serif;
 text-align: left;
 padding: 20px; 
-position: absolute;
-
+/* position: absolute; */
+ background-image: url('https://images.unsplash.com/photo-1566041510394-cf7c8fe21800?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80'); 
+ background-repeat: repeat;
 }
 
 .App{
-  font-size: 17px;
-  color: rgb(41, 63, 228);
+  font-size: 16px;
+  color: #055F80;
 }
 
-.title{
-  margin-left: 85%;
-  /* background-color: aqua; */
+
+
+ .title h1{
+  color: #055F80;
+  
 }
 
 .navbar {
@@ -35,13 +38,13 @@ position: absolute;
 }
 .navbar ul a {
   text-decoration:none;
-  color: rgb(41, 63, 228);
+  color: #055F80;
   font-weight: bolder;
 }
 
  .signup-form{
-  display: inline-block;
   text-align: center;
+  margin-left: 14%;
   padding: 7px 0px;
   margin: 0 auto;
   text-align: center;
@@ -49,31 +52,35 @@ position: absolute;
   font-family: 'Merriweather', serif;
   font-size: 20px;
   padding: 14px 50px;
-  width:55%;
+  width:  55%;
   justify-content: center;
-  color: #8d2f26;
+  color: #055F80;
+  /* grid-column-start: span 2; */
 }
  .signup-form input {
-    font-size: 1em;
-    width: 100%;
-    border-radius: 7px;
-    padding: 12px 20px;
-    margin-left: 5px;
-    margin: 8px 0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
+  font-size: 1em;
+  border: 2px solid #DB9DC4;
+  border-radius: 7px;
+  padding: 12px 20px;
+  margin-left: 5px;
+  margin: 8px 0;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: #055F80;
+  width:  55%;
   }
 
   .signup-form label{
-    justify-content: center;
+    
     display: block;
-    color: #8d2f26
+    color: #055F80;
   }
 
   .signup-login-form{
-    display: inline-block;
+    
   text-align: center;
+  margin-left: 14%;
   padding: 7px 0px;
   margin: 0 auto;
   text-align: center;
@@ -83,13 +90,13 @@ position: absolute;
   padding: 14px 50px;
   width:  50%;
   justify-content: center;
-  color: #8d2f26
+  color: #055F80;
 
   }
 
   .signup-login-form input {
     font-size: 1em;
-    border: 2px solid #DB9DC4;
+    border: 2px solid;
     border-radius: 7px;
     padding: 12px 20px;
     margin-left: 5px;
@@ -97,19 +104,19 @@ position: absolute;
     border: 2px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
-    color: #8d2f26
+    color: #055F80;
   }
 
   .travelplanner{
     font-size: 1em;
     padding: 12px 20px;
     margin-left: 5px;
-    margin: 8px 0;
-    /* border: 1px solid #ccc; */
+    /* margin: 8px 0; */
     display: block;
     justify-content:center;
     border-radius: 4px;
     box-sizing: border-box;
+    
   }
 
   .medium ui button{
@@ -120,14 +127,15 @@ position: absolute;
     display: flex;
     font-size: 1em;
     border: 2px solid #DB9DC4;
-    border-radius: 7px;
     padding: 12px 20px;
     margin-left: 5px;
     margin: 8px 0;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
-    width: 80%;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    width: 45%;
   }
 
   .MuiCard-root{
@@ -136,6 +144,8 @@ position: absolute;
     flex-wrap: wrap;
     margin-bottom: 30px;
   }
+
+  
 
   .destination-view{
     display: flex;
@@ -168,7 +178,7 @@ position: absolute;
     flex-direction: row;
    text-decoration: none;
    margin-right: 85%;
-    color: rgb(41, 63, 228);
+   color: #055F80;
     font-size: 23px;
   }
 
@@ -183,4 +193,37 @@ position: absolute;
   .user{
     display: flex;
     flex-direction: row;
+  }
+
+  .tripplanner-container{
+       display: flex;
+       flex-direction: row;
+       flex-wrap: wrap;
+       
+  }
+
+  .tripplanner-view{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: auto;
+    margin-right: 45px;
+  }
+
+  .tripplanner-card{
+    padding-left: 40px;
+    justify-content: center;
+  }
+
+  .things-view{
+    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .things-card{
+    margin-top: 25px;
+    margin-bottom: 5px;
+    margin-left: auto;
+    margin-right: 45px;
   }
