@@ -6,7 +6,7 @@ import {Card,CardContent,Typography} from "@mui/material"
 import {useHistory,Route,Router} from "react-router-dom"
 import ThingsToDoView from "./ThingsToDoView"
 
- function DestinationCard({destinations}){
+ function DestinationCard({destinations,user}){
     let history = useHistory();
 
     return (
@@ -23,8 +23,6 @@ import ThingsToDoView from "./ThingsToDoView"
          </CardContent>
         </Card>  
         
-        <Router history={history}>
-        </Router>
         </div>
     )
 }

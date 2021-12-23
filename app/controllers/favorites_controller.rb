@@ -1,7 +1,8 @@
 class FavoritesController < ApplicationController
     rescue_from ActiveRecord::RecordInvalid, with: :record_invalid
-    
+
     def create 
+        
         favorite = Favorite.create!(favorite_params)
         render json: favorite,status: :created
     end

@@ -2,19 +2,18 @@ import { Button, Card,Typography,CardContent } from "@mui/material"
 import { useState } from "react"
 export default function ThingsToDoCard({things,user}){
 
-  console.log(user)
-  console.log(things)
+   const[showButton,setShowButton] = useState(true)
    const[addFavourite,setAddFavourite] = useState({
      
      things_to_do_id:things.id,
-     user_id:user.id
+     user_id: user.id
     
    })
 
    const newFavortie = {...addFavourite}
   
   function handleClick(){
-   
+   setShowButton((showButton) => !showButton)
     fetch("/favorites",{
       method:"POST",
       headers:{
@@ -25,6 +24,7 @@ export default function ThingsToDoCard({things,user}){
        .then((data) => setAddFavourite,{
         things_to_do_id:"",
         user_id:""
+       
        })
 }
   return(
@@ -49,7 +49,10 @@ export default function ThingsToDoCard({things,user}){
           Ratings(out of 5) {things.rating}
           </Typography>
           </CardContent>
-           <Button onClick = {handleClick}>♡</Button> 
+          { showButton ?
+            <Button onClick = {handleClick}>♡</Button> :<Button> ❤️</Button>
+          }
+           
           
           <Button>Add To Trips</Button>
           </Card>

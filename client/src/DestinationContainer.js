@@ -14,9 +14,6 @@ export default function DestinationContainer({user}){
         .then((data) => {
           
             setAllDestination(data)
-            console.log(data)
-            //console.log(data)
-            
         })
     },[])
 
@@ -31,7 +28,9 @@ export default function DestinationContainer({user}){
              </Route>
              <Route exact path="/trips">
              </Route> 
-             <Route path="/places/:destinations" component={ThingsToDoRender} />
+             <Route path="/places/:destinations" >
+             <ThingsToDoRender user ={user}/> 
+                 </Route>
              </Switch> 
         </>
     )
