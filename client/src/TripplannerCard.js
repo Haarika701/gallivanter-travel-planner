@@ -15,7 +15,7 @@ useEffect(() => {
 
     return(
         <div class = "tripplanner-view">
-           <h3>View your exisitng trips here</h3> 
+           <h3>View Your Plans Here!!!</h3> 
                  <TripplannerContainer showPlans={showPlans}/>
         </div>
     )

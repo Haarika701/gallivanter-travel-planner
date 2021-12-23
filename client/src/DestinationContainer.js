@@ -25,11 +25,6 @@ export default function DestinationContainer({user}){
 
     return (
         <>
-             <div className="user">
-             <img src = {user.image} alt = "user"/>
-            <h3>Hi,{user.username}!!</h3> 
-            
-            </div>
             <Switch> 
              <Route exact path= "/places">
              <DestinationView allDestination= {allDestination} user = {user}/>
@@ -37,10 +32,7 @@ export default function DestinationContainer({user}){
              <Route exact path="/trips">
              </Route> 
              <Route path="/places/:destinations" component={ThingsToDoRender} />
-             </Switch>
-             
-           
-              
+             </Switch> 
         </>
     )
 }

@@ -18,7 +18,12 @@ class TripPlannersController < ApplicationController
         # user = @current_user
         tripplanner = TripPlanner.create!(planner_params)
         render json: tripplanner,status: :created,each_serializer:TripPlannerShowSerializer
+    end
 
+    def destroy
+        trip_planner = TripPlanner.find(params[:id])
+        trip_planner.destroy
+        render json:{}
     end
 
     private 

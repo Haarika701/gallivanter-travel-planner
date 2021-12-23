@@ -13,8 +13,6 @@ padding: 20px;
   color: #055F80;
 }
 
-
-
  .title h1{
   color: #055F80;
   
@@ -163,7 +161,8 @@ padding: 20px;
   }
 
   .tripplanner-link{
-    align-items: flex-start;
+    
+  align-items: flex-start;
   padding-top: 20px;
   display: flex;
   flex-direction: row;
@@ -174,17 +173,17 @@ padding: 20px;
   }
 
   .tripplanner-link a{
-    display: flex;
-    flex-direction: row;
+   display: flex;
+   flex-direction: row;
    text-decoration: none;
    margin-right: 85%;
    color: #055F80;
-    font-size: 23px;
+  font-size: 23px;
   }
 
   .user img{
     
-    border: 1px solid #ddd;
+  border: 1px solid #ddd;
   border-radius: 50%;
   padding: 5px;
   width: 30px;
@@ -199,7 +198,6 @@ padding: 20px;
        display: flex;
        flex-direction: row;
        flex-wrap: wrap;
-       
   }
 
   .tripplanner-view{

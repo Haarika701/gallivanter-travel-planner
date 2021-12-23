@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
  
   resources :trips
-  resources :favorites
+  resources :favorites,only:[:create]
   resources :things_to_dos,only:[:show,:index]
   resources :places,only:[:index,:show]
-  resources :trip_planners,only:[:index,:create,:show]
+  resources :trip_planners,only:[:index,:create,:show,:destroy]
   resources :users ,only:[:create,:show]
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   post '/login', to: 'sessions#create'
@@ -12,6 +12,5 @@ Rails.application.routes.draw do
   get '/me', to: 'users#show'
 
   get '/tripplanners',to:'trip_planners#show'
-   #get '/thingstodo', to:'things_to_dos#show'
   get "*path", to: "fallback#index", constraints: ->(req) { !req.xhr? && req.format.html? }
 end

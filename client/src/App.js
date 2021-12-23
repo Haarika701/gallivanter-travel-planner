@@ -24,16 +24,21 @@ function App() {
    
   return (
     <div className="App">
+
      {/* <img src = {logo}/> */}
-       
+     
        <Header user = {user} setUser = {setUser}/>
+       <div className='user'>
+       <img src = {user.image} alt = "user"/>
+       <h3>Hi,{user.username}!!</h3> 
+       </div>
        <NavBar/> 
-      
            {
                 user ? 
                 <DestinationContainer user = {user} /> : <LoginSignUp setUser = {setUser} />
             }
             <br/>
+           
              <TripPlannerview/>
     </div>
   );

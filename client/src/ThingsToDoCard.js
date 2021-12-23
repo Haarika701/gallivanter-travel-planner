@@ -1,38 +1,57 @@
 import { Button, Card,Typography,CardContent } from "@mui/material"
 import { useState } from "react"
-export default function ThingsToDoCard({things:{description,category,expense,rating,image,name}}){
+export default function ThingsToDoCard({things,user}){
 
-  const[showButton,setShowButton] = useState(true)
+  console.log(user)
+  console.log(things)
+   const[addFavourite,setAddFavourite] = useState({
+     
+     things_to_do_id:things.id,
+     user_id:user.id
+    
+   })
 
+   const newFavortie = {...addFavourite}
+  
   function handleClick(){
-    setShowButton((showButton) => !showButton)
-  }
-
+   
+    fetch("/favorites",{
+      method:"POST",
+      headers:{
+        "Content-Type":"application/json"
+      },
+      body: JSON.stringify(newFavortie)
+    }).then((res) => res.json())
+       .then((data) => setAddFavourite,{
+        things_to_do_id:"",
+        user_id:""
+       })
+}
   return(
         <div className="things-card">
          <Card sx={{ maxWidth: 350 }} >
-          <img src = {image} alt = "things" width="350px" height="250px"/>
+          <img src = {things.image} alt = "things" width="350px" height="250px"/>
           <CardContent>
           <Typography gutterBottom variant="h4">
-          {name}
+          {things.name}
           </Typography>
           <Typography variant="body3" color="text.secondary">
-          {description}
+          {things.description}
           </Typography> <br/>
          <br/>
           <Typography gutterBottom variant="body3">
-          Category:{category}
+          Category:{things.category}
           </Typography><br/>
           <Typography gutterBottom variant="body3">
-          Expense:{expense}
+          Expense:{things.expense}
           </Typography><br/>
           <Typography gutterBottom variant="body3">
-          Ratings(out of 5) {rating}
+          Ratings(out of 5) {things.rating}
           </Typography>
           </CardContent>
-          {
-            showButton ? <Button onClick = {handleClick}>♡</Button> : <Button onClick={handleClick}>❤️</Button>
-          }
+           <Button onClick = {handleClick}>♡</Button> 
+          
+          <Button>Add To Trips</Button>
           </Card>
         </div>
     )

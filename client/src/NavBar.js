@@ -8,16 +8,17 @@ function NavBar(){
     return(
       <>
       <div className="tripplanner-link">
-      <Link to = "/tripplanner">Trip Planner</Link> 
-      <Link to = "/account">Account</Link>
-      <Link to = "/favourites">Favourtie</Link>
+        <ul>
+        <Link to = "/tripplanner">Trip Planner</Link> 
+        <Link to = "/favourites">Favorite</Link>
+        </ul>
       </div>
       <div className="navbar">
-       <ul>
-        <Link to ="/places">Places</Link>
-         <Link to ="/trips">Trips</Link> 
-       </ul> 
-       </div> 
+        <ul>
+          <Link to ="/places">Places</Link>
+          <Link to ="/trips">Trips</Link> 
+        </ul> 
+      </div> 
        </>
     )
     

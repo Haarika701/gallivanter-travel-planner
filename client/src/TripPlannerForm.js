@@ -146,9 +146,7 @@ export default function TripPlannerForm(){
                 value={formData.city}
                 onChange={handleChange}
             />
-           
             <br/>
-        
             <InputLabel htmlFor="hotel_address"> Hotel Address:</InputLabel>
             <input
                 id="hotel_address-plan-input"
@@ -157,9 +155,7 @@ export default function TripPlannerForm(){
                 value={formData.hotel_address}
                 onChange={handleChange}
             />
-          
             <br/>
-           
             <InputLabel htmlFor="hotel_checkin">Hotel Checkin Date:</InputLabel>
             <input
                 id="hotel_checkin-signup-input"
@@ -170,7 +166,6 @@ export default function TripPlannerForm(){
             />
           
             <br/>
-            
              <InputLabel htmlFor="hotel_checkout">Hotel Checkout Date: </InputLabel>
             <input
                 id="email-signup-input"
@@ -179,14 +174,9 @@ export default function TripPlannerForm(){
                 value={formData.hotel_checkout}
                 onChange={handleChange}
             />
-          
            <br/>
-           
            <br/>
           <legend>Flight Details</legend>
-
-        
-
             <InputLabel htmlFor="flight_name">Flight Name:</InputLabel>
             <input
                 className="flight-plan-input"
@@ -197,7 +187,6 @@ export default function TripPlannerForm(){
             />
            
             <br/>
-          
             <InputLabel htmlFor="flight_number">Flight Number:</InputLabel>
             <input
                 className="flightnumber-plan-input"
@@ -206,9 +195,7 @@ export default function TripPlannerForm(){
                 value={formData.flight_number}
                 onChange={handleChange}
             />
-          
             <br/>
-             
             <InputLabel htmlFor="flight_to">Flight To:</InputLabel>
             <input
                 className="flighto-plan-input"
@@ -217,9 +204,7 @@ export default function TripPlannerForm(){
                 value={formData.flight_to}
                 onChange={handleChange}
             />
-             
               <br/>
-             
             <InputLabel htmlFor="flight_from">Flight From:</InputLabel>
             <input
                 className="flighfrom-plan-input"
@@ -228,13 +213,8 @@ export default function TripPlannerForm(){
                 value={formData.flight_from}
                 onChange={handleChange}
             />
-         
             <br/>
-         
-           
-           
             <InputLabel htmlFor="notes">Notes:</InputLabel>
-           
             <input
                 className="notes-plan-input"
                 type="notes"  class="form-control"
@@ -242,10 +222,8 @@ export default function TripPlannerForm(){
                 defaultValue={formData.notes}
                 onChange={handleChange}
             />
-          
            <br/>
             <Button variant="contained" type="submit" >Save Plan</Button>
-          
             </form>
         
         
