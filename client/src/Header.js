@@ -1,8 +1,8 @@
 
-
+import NavBar from "./NavBar"
 import { Button,Box } from "@mui/material"
 
-export default function Header({user, setUser,username}){
+export default function Header({user, setUser}){
 
     function handleLogout(){
         console.log("Logging out")
@@ -18,8 +18,8 @@ export default function Header({user, setUser,username}){
 return(
     
     <div class = "title">
-        <h1>Gallivanter : A Travel Planner</h1>
-        {user ? <Button variant="contained"onClick = {handleLogout}>Logout!</Button> : null}  
+
+        {user ? <Button variant="contained"onClick = {handleLogout}>Logout!</Button> : null} 
     </div>
 )
 }

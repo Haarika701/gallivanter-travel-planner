@@ -34,9 +34,10 @@ export default function TripPlannerPage({plan}){
         </Typography>
         </CardContent>
         <hr/>
+        {/* <Button variant="contained" size = "small">Add to Trips </Button> */}
         <Button variant="contained" size="small" onClick = {handleDelete}>Delete </Button>
         </Card>
-        {/* <Button variant="contained" size = "small">Edit </Button> */}
+        
         </div>
     )
 }

@@ -164,7 +164,7 @@ padding: 20px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-  padding-top: 20px;
+  
     justify-content: center;
     font-size: 1.5em;
     justify-content: right;
@@ -174,9 +174,9 @@ padding: 20px;
    display: flex;
    flex-direction: row;
    text-decoration: none;
-   margin-right: 85%;
+  
    color: #055F80;
-  font-size: 23px;
+  font-size: 18px;
   }
 
   .tripplanner-link ul{
@@ -184,8 +184,8 @@ padding: 20px;
     flex-direction: row;
     flex-wrap: wrap;
       justify-content: center;
-      font-size: 1.5em;
-      justify-content: space-around;
+      font-size: 1em;
+      justify-content: center;
   }
 
   .user img{

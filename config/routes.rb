@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
  
-  resources :trips
-  resources :favorites,only:[:create]
+  resources :trips,only:[:create]
+  resources :favorites,only:[:create,:index]
   resources :things_to_dos,only:[:show,:index]
   resources :places,only:[:index,:show]
   resources :trip_planners,only:[:index,:create,:show,:destroy]
@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   post '/login', to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy'
   get '/me', to: 'users#show'
-
+  get '/favoritethings',to:'favorites#show'
   get '/tripplanners',to:'trip_planners#show'
   get "*path", to: "fallback#index", constraints: ->(req) { !req.xhr? && req.format.html? }
 end
