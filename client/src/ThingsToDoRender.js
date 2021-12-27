@@ -1,7 +1,7 @@
 import {useState,useEffect} from "react"
 import { useParams } from "react-router-dom"
 import ThingsToDoView from "./ThingsToDoView"
-export default function ThingsToRender({user}){
+export default function ThingsToRender({user,search,setSearch}){
 let {destinations} = useParams()
     const[allThings,setAllThings] = useState([])
     
@@ -18,7 +18,7 @@ let {destinations} = useParams()
     return (
         
         <div className="things-render">
-        <ThingsToDoView allThings={allThings} user = {user}/>
+        <ThingsToDoView allThings={allThings} user = {user} search={search} setSearch={setSearch}/>
         </div>
     )
 }
