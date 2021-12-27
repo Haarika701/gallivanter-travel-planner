@@ -10,6 +10,8 @@ import DestinationContainer from "./DestinationContainer"
 import LoginSignUp from "./LoginSignup"
 
 import NavBar from './NavBar'
+import { Link } from '@mui/material'
+
 // import logo from "./logo.png"
 function App() {
   const [user, setUser] = useState(null)
@@ -31,7 +33,7 @@ function App() {
     <h1>Gallivanter: A Travel Planner App</h1>
     <div className='user'>
        <img src = {user.image} alt = "user"/>
-       <h3>Hi,{user.username}!!</h3> 
+      <Link> <h3>Hi,{user.username}!!</h3> </Link>
        </div>
      {/* <img src = {logo}/> */}
       

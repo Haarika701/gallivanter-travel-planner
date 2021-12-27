@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
  
-  resources :trips,only:[:create]
+  resources :trips,only:[:create,:show,:index]
   resources :favorites,only:[:create,:index]
   resources :things_to_dos,only:[:show,:index]
   resources :places,only:[:index,:show]
@@ -12,5 +12,6 @@ Rails.application.routes.draw do
   get '/me', to: 'users#show'
   get '/favoritethings',to:'favorites#show'
   get '/tripplanners',to:'trip_planners#show'
+  
   get "*path", to: "fallback#index", constraints: ->(req) { !req.xhr? && req.format.html? }
 end

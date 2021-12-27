@@ -69,10 +69,8 @@ ActiveRecord::Schema.define(version: 2021_12_15_203740) do
 
   create_table "trips", force: :cascade do |t|
     t.bigint "trip_planner_id", null: false
-    t.bigint "things_to_do_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["things_to_do_id"], name: "index_trips_on_things_to_do_id"
     t.index ["trip_planner_id"], name: "index_trips_on_trip_planner_id"
   end
 
@@ -92,6 +90,5 @@ ActiveRecord::Schema.define(version: 2021_12_15_203740) do
   add_foreign_key "favorites", "users"
   add_foreign_key "things_to_dos", "places"
   add_foreign_key "trip_planners", "users"
-  add_foreign_key "trips", "things_to_dos"
   add_foreign_key "trips", "trip_planners"
 end

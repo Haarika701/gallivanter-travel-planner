@@ -2,7 +2,6 @@ import {Button,Card, CardContent, Typography} from "@mui/material"
 import { useState } from "react"
 export default function TripPlannerPage({plan}){
   
-    // const [editPlans,setEditPlans] = useState([])
     function handleDelete(){
        fetch(`/trip_planners/${plan.id}`,{
            method:"DELETE",
@@ -15,6 +14,11 @@ export default function TripPlannerPage({plan}){
                console.log("deleted")
            })
         }
+
+           
+        
+
+        
 
     return(
         <div className="tripplanner-card">
@@ -34,7 +38,7 @@ export default function TripPlannerPage({plan}){
         </Typography>
         </CardContent>
         <hr/>
-        {/* <Button variant="contained" size = "small">Add to Trips </Button> */}
+      
         <Button variant="contained" size="small" onClick = {handleDelete}>Delete </Button>
         </Card>
         

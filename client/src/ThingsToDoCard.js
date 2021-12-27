@@ -52,9 +52,6 @@ export default function ThingsToDoCard({things,user}){
           { showButton ?
             <Button onClick = {handleClick}>♡</Button> :<Button> ❤️</Button>
           }
-           
-          
-          <Button>Add To Trips</Button>
           </Card>
         </div>
     )
