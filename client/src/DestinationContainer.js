@@ -10,6 +10,7 @@ export default function DestinationContainer({user}){
 
     const[allDestination,setAllDestination]= useState([])
     const [search, setSearch] = useState("");
+   
     
     useEffect(()=> {
         fetch("/places")
@@ -19,6 +20,8 @@ export default function DestinationContainer({user}){
             setAllDestination(data)
         })
     },[])
+
+    
 
     const filterPlaces = allDestination.filter(
         (destinations) =>
