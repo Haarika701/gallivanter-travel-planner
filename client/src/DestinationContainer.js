@@ -3,7 +3,7 @@ import DestinationView from "./Destinationview"
 import SearchPlace from "./SearchPlace"
 import { Switch,Route} from "react-router-dom"
 import ThingsToDoRender from "./ThingsToDoRender"
-
+import UserAccount from "./UserAccount"
 
 
 export default function DestinationContainer({user}){
@@ -30,17 +30,15 @@ export default function DestinationContainer({user}){
 
     return (
         <> 
-       
-           
             <Switch> 
              <Route exact path= "/places">
              <SearchPlace search={search} setSearch={setSearch}/>
              <DestinationView allDestination= {filterPlaces} user = {user} />
              </Route>
-             
              <Route path="/places/:destinations" >
               <ThingsToDoRender user ={user} /> 
             </Route>
+           
              </Switch> 
         </>
     )

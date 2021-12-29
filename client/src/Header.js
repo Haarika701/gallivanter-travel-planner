@@ -1,6 +1,7 @@
 
 import NavBar from "./NavBar"
 import { Button,Box } from "@mui/material"
+import { Route ,Link} from "react-router-dom"
 
 export default function Header({user, setUser}){
 
@@ -18,7 +19,7 @@ export default function Header({user, setUser}){
 return(
     
     <div class = "title">
-
+        
         {user ? <Button variant="contained"onClick = {handleLogout}>Logout!</Button> : null} 
     </div>
 )

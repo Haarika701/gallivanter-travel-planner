@@ -5,6 +5,7 @@ import { Route, Switch } from 'react-router-dom'
 import TripPlannerview from "./TripPlannerview"
 import React, { useEffect, useState } from "react"
 import DestinationContainer from "./DestinationContainer"
+import UserAccount from './UserAccount'
  
  import Header from "./Header"
 import LoginSignUp from "./LoginSignup"
@@ -33,10 +34,10 @@ function App() {
     <h1>Gallivanter: A Travel Planner App</h1>
     <div className='user'>
        <img src = {user.image} alt = "user"/>
-      <Link> <h3>Hi,{user.username}!!</h3> </Link>
-       </div>
+       Hi,{user.username}!!
+    </div>
      {/* <img src = {logo}/> */}
-      
+    
        <Header user = {user} setUser = {setUser}/><br/>
        <NavBar/>
            {
@@ -51,6 +52,9 @@ function App() {
             <Route exact path="/favourites">
              <FavoriteView/>
              </Route>
+             <Route exact path = "/useraccount">
+             <UserAccount user = {user}/>
+            </Route>
              </Switch> 
     </div>
   );
