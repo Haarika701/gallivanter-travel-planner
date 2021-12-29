@@ -2,6 +2,7 @@ import {useState,useEffect} from "react"
 import { useParams } from "react-router-dom"
 import ThingsToDoView from "./ThingsToDoView"
 import CategoryThings from "./CategoryThings"
+import React from "react";
 export default function ThingsToRender({user}){
 let {destinations} = useParams()
     const[allThings,setAllThings] = useState([])

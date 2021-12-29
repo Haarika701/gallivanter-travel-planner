@@ -1,7 +1,9 @@
 import {Button,Card, CardContent, Typography} from "@mui/material"
-import { useState } from "react"
+import Calendar from 'react-calendar'
+import React,{useState} from "react";
 export default function TripPlannerPage({plan}){
   
+    const [date, setDate] = useState(new Date());
     function handleDelete(){
        fetch(`/trip_planners/${plan.id}`,{
            method:"DELETE",
@@ -14,11 +16,6 @@ export default function TripPlannerPage({plan}){
                console.log("deleted")
            })
         }
-
-           
-        
-
-        
 
     return(
         <div className="tripplanner-card">
@@ -38,10 +35,26 @@ export default function TripPlannerPage({plan}){
         </Typography>
         </CardContent>
         <hr/>
-      
         <Button variant="contained" size="small" onClick = {handleDelete}>Delete </Button>
         </Card>
-        
+        {/* <Calendar onChange={setDate}
+          value={date}
+          selectRange={true}
+        />
+     
+      {date.length > 0 ? (
+        <p className='text-center'>
+          <span className='bold'>Start:</span>{' '}
+          {date[0].toDateString()}
+          &nbsp;|&nbsp;
+          <span className='bold'>End:</span> {date[1].toDateString()}
+        </p>
+      ) : (
+        <p className='text-center'>
+          <span className='bold'>Default selected date:</span>{' '}
+          {date.toDateString()}
+        </p>
+      )} */}
         </div>
     )
 }

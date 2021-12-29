@@ -3,8 +3,7 @@ import DestinationView from "./Destinationview"
 import SearchPlace from "./SearchPlace"
 import { Switch,Route} from "react-router-dom"
 import ThingsToDoRender from "./ThingsToDoRender"
-import UserAccount from "./UserAccount"
-
+import React from "react";
 
 export default function DestinationContainer({user}){
 

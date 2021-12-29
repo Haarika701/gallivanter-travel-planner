@@ -6,15 +6,16 @@ import TripPlannerview from "./TripPlannerview"
 import React, { useEffect, useState } from "react"
 import DestinationContainer from "./DestinationContainer"
 import UserAccount from './UserAccount'
- 
- import Header from "./Header"
+import Header from "./Header"
 import LoginSignUp from "./LoginSignup"
-
+import 'react-calendar/dist/Calendar.css';
 import NavBar from './NavBar'
-import { Link } from '@mui/material'
 
 // import logo from "./logo.png"
+
 function App() {
+  
+
   const [user, setUser] = useState(null)
     useEffect(()=> {
         fetch("/me")
@@ -27,7 +28,6 @@ function App() {
               })
     }, [])
     if (!user) return <LoginSignUp setUser = {setUser} />
-     
    
   return (
     <div className="App">
@@ -39,6 +39,7 @@ function App() {
      {/* <img src = {logo}/> */}
     
        <Header user = {user} setUser = {setUser}/><br/>
+      
        <NavBar/>
            {
                 user ? 
@@ -54,6 +55,9 @@ function App() {
              </Route>
              <Route exact path = "/useraccount">
              <UserAccount user = {user}/>
+            </Route>
+            <Route exact path = "/eventcalendar">
+          
             </Route>
              </Switch> 
     </div>

@@ -1,4 +1,5 @@
 import DestinationCard from "./DestinationCard";
+import React from "react";
 
 export default function DestinationView({allDestination,user}){
     

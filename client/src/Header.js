@@ -1,8 +1,8 @@
 
-import NavBar from "./NavBar"
-import { Button,Box } from "@mui/material"
-import { Route ,Link} from "react-router-dom"
 
+import { Button} from "@mui/material"
+
+import React from "react";
 export default function Header({user, setUser}){
 
     function handleLogout(){

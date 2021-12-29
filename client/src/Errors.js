@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import React from "react";
 function Error({ children }) {
   return (
     <Wrapper>

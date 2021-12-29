@@ -2,7 +2,7 @@ import LoginForm from "./LoginForm"
 import SignUpForm from "./SignUpForm"
 import { useState } from 'react'
 import Header from "./Header"
-
+import React from "react";
 
 export default function LoginSignUp( {setUser} ){
     const [signUp, setSignUp] = useState(false)

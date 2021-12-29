@@ -1,5 +1,7 @@
 
 import { Link} from "react-router-dom"
+import React from "react";
+
 function NavBar(){
     return(
       <>
@@ -9,6 +11,8 @@ function NavBar(){
         <Link to = "/tripplanner">Trip Planner</Link> 
         <Link to = "/favourites">Favorite</Link>
         <Link to = "/useraccount">Account</Link> 
+        <Link to = "/eventcalendar">Calendar</Link>
+       
         </ul> 
       </div> 
       </>
