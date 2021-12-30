@@ -11,7 +11,6 @@ function NavBar(){
         <Link to = "/tripplanner">Trip Planner</Link> 
         <Link to = "/favourites">Favorite</Link>
         <Link to = "/useraccount">Account</Link> 
-        <Link to = "/eventcalendar">Calendar</Link>
        
         </ul> 
       </div> 

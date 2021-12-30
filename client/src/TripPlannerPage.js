@@ -1,9 +1,13 @@
 import {Button,Card, CardContent, Typography} from "@mui/material"
-import Calendar from 'react-calendar'
+import FullCalendar from '@fullcalendar/react' // must go before plugins
+import dayGridPlugin from '@fullcalendar/daygrid' // a plugin!
+import interactionPlugin from "@fullcalendar/interaction";
+import listPlugin from '@fullcalendar/list'
 import React,{useState} from "react";
+
 export default function TripPlannerPage({plan}){
   
-    const [date, setDate] = useState(new Date());
+    const [showCalendar,setShowChalender] = useState(false)
     function handleDelete(){
        fetch(`/trip_planners/${plan.id}`,{
            method:"DELETE",
@@ -16,7 +20,14 @@ export default function TripPlannerPage({plan}){
                console.log("deleted")
            })
         }
+      function  handleDateClick (arg) { // bind with an arrow function
+            alert(arg.dateStr)
+          }
 
+          function handleCalendarClick(){
+              setShowChalender((showCalendar) => !(showCalendar))
+          }
+        
     return(
         <div className="tripplanner-card">
         <Card sx={{ maxWidth: 338 }}>
@@ -36,25 +47,24 @@ export default function TripPlannerPage({plan}){
         </CardContent>
         <hr/>
         <Button variant="contained" size="small" onClick = {handleDelete}>Delete </Button>
-        </Card>
-        {/* <Calendar onChange={setDate}
-          value={date}
-          selectRange={true}
-        />
+        </Card>{showCalendar ?
+          <Button onClick = {handleCalendarClick}>Show Calendar</Button> :
+          <Button onClick = {handleCalendarClick}>Hide Calendar</Button>
+        }
+
+        {showCalendar ? <FullCalendar
+        plugins={[ dayGridPlugin,interactionPlugin,listPlugin]}
+        dateClick={handleDateClick}
+        initialView="dayGridMonth"
+        events={[
+            { title: plan.plan_name, start: plan.trip_start ,end: plan.trip_end ,display: 'background' }
+          ]}
+       /> :null
+
+        }
+       
+       
      
-      {date.length > 0 ? (
-        <p className='text-center'>
-          <span className='bold'>Start:</span>{' '}
-          {date[0].toDateString()}
-          &nbsp;|&nbsp;
-          <span className='bold'>End:</span> {date[1].toDateString()}
-        </p>
-      ) : (
-        <p className='text-center'>
-          <span className='bold'>Default selected date:</span>{' '}
-          {date.toDateString()}
-        </p>
-      )} */}
         </div>
     )
 }
