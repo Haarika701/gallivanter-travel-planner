@@ -59,9 +59,12 @@ export default function SignupForm( {setUser, handleFormDisplay} ) {
   }
 
   return (
-    <div >
+    
+       <>
         <form  className="signup-form" onSubmit={handleSubmit}>
         <h4>Sign up for an account</h4><hr/>
+        
+                 
         {errors.map((err) => (<Error key={err}>{err}</Error>))}
        
         <label variant="outlined" htmlFor="first">First Name</label>
@@ -156,7 +159,7 @@ export default function SignupForm( {setUser, handleFormDisplay} ) {
        
         <h4>Already have an account? <Button variant="contained"  onClick = {handleFormDisplay}>Log In Now!</Button></h4>
        
-        </div>
+        </>
         
   );
 };

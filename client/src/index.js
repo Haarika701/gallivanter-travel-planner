@@ -9,8 +9,8 @@ ReactDOM.render(
   
   <React.StrictMode>
     <BrowserRouter>
-    <App />
-    
+    <h1>Gallivanter: A Travel Itenary App</h1>
+    <App />           
     </BrowserRouter>
   </React.StrictMode>,
   

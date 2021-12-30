@@ -28,19 +28,35 @@ function App() {
               })
     }, [])
     if (!user) return <LoginSignUp setUser = {setUser} />
+
+    /* <div class="container">
+  <p>CSS Grid Method</p>
+  <div class="image-stack">
+    <div class="image-stack__item image-stack__item--top">
+      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/110238/portrait1.jpeg" alt="">
+    </div>
+    <div class="image-stack__item image-stack__item--bottom">
+      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/110238/texture-waves-cropped.jpg" alt="">
+    </div>
+  </div>
+  <p>Text can go down here yabba dabba do</p>
+</div> */
    
   return (
-    <div className="App">
-    <h1>Gallivanter: A Travel Planner App</h1>
-    <div className='user'>
-       <img src = {user.image} alt = "user"/>
-       Hi,{user.username}!!
-    </div>
-     {/* <img src = {logo}/> */}
+
+  <>
+    <div className="App-Container">
     
-       <Header user = {user} setUser = {setUser}/><br/>
-      
-       <NavBar/>
+      <div className='user'>
+         <img src = {user.image} alt = "user"/>
+          <p>Hi,{user.username}!!</p>
+        </div>
+    
+    {/* <img src = {logo}/> */}
+    
+    <Header user = {user} setUser = {setUser}/><br/>
+
+    <NavBar/>
            {
                 user ? 
                 <DestinationContainer user = {user} setUser = {setUser}/>  : <LoginSignUp setUser = {setUser} />
@@ -56,11 +72,9 @@ function App() {
              <Route exact path = "/useraccount">
              <UserAccount user = {user}/>
             </Route>
-            <Route exact path = "/eventcalendar">
-          
-            </Route>
              </Switch> 
     </div>
+    </>
   );
 }
 

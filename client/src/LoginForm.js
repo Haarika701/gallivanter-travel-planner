@@ -52,7 +52,14 @@ export default function LoginForm ( {setUser, handleFormDisplay} ) {
           <form className = "signup-login-form" onSubmit={handleSubmit}>
           <h4>Log into your account</h4><hr/>
           {errors.map((err) => (<Error key={err}>{err}</Error>))}
-
+          {/* <div class="image-stack"> 
+            <div class="image-stack__item image-stack__item--top">
+              <img src='https://fullsuitcase.com/wp-content/uploads/2019/11/Things-to-do-in-Mauritius-the-ultimate-guide.jpg.webp' alt='mauritius' height="300px"/>
+            </div>
+             <div class="image-stack__item image-stack__item--bottom">
+              <img src='https://i.pinimg.com/originals/12/30/92/1230929ce075884b0019119d3b3df44f.png'alt = 'turkey'/>
+                </div> 
+                 </div> */}
           <label htmlFor="username">Username:</label>
           <input
               id="username-login-input"
