@@ -1,12 +1,12 @@
 
 import './App.css'
+import { Button} from "@mui/material"
 import FavoriteView from './FavoriteView'
 import { Route, Switch } from 'react-router-dom'
 import TripPlannerview from "./TripPlannerview"
 import React, { useEffect, useState } from "react"
 import DestinationContainer from "./DestinationContainer"
 import UserAccount from './UserAccount'
-import Header from "./Header"
 import LoginSignUp from "./LoginSignup"
 import 'react-calendar/dist/Calendar.css';
 import NavBar from './NavBar'
@@ -29,19 +29,15 @@ function App() {
     }, [])
     if (!user) return <LoginSignUp setUser = {setUser} />
 
-    /* <div class="container">
-  <p>CSS Grid Method</p>
-  <div class="image-stack">
-    <div class="image-stack__item image-stack__item--top">
-      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/110238/portrait1.jpeg" alt="">
-    </div>
-    <div class="image-stack__item image-stack__item--bottom">
-      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/110238/texture-waves-cropped.jpg" alt="">
-    </div>
-  </div>
-  <p>Text can go down here yabba dabba do</p>
-</div> */
-   
+    function handleLogout(){
+          console.log("Logging out")
+          fetch("/logout",{
+              method: "DELETE"
+          })
+          .then(resp => resp.json())
+          .then(setUser(null))
+      }
+
   return (
 
   <>
@@ -54,7 +50,7 @@ function App() {
     
     {/* <img src = {logo}/> */}
     
-    <Header user = {user} setUser = {setUser}/><br/>
+    {user ? <Button variant="contained"onClick = {handleLogout}>Logout!</Button> : null} 
 
     <NavBar/>
            {
