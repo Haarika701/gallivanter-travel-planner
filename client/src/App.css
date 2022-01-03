@@ -290,62 +290,17 @@ width: 100%;
     margin-right: 45px;
   }
 
-  
-  .search-input {
-    font-size: 1.2em;
-    width: 80%;
-    display: block;
-      box-sizing: border-box;
-     border-radius: 8px;
-  }
-
-  .search{
+  .search {
+    font-size: 1.5em;
     
-    
-    padding: 0 12px;
-    /* border-radius: 30px; */
-    align-items: center;
-    height: 10%;
-    width: 55%;
-    padding: 10px 16px 10px 20px;
-    border-radius: 30px;
-    box-sizing: border-box;
-    
+    margin-top: 2px solid black;
+    color: black
   }
-
-  .searchbar{
-    position: relative;
-    width: 30rem;
-    background: var(--color-brand);
-    border-radius: var(--rad);
+  .search input{
+    font-size: 1em;
+    border: 2px solid black;
+    border-radius: 7px;
+    margin: 4px;
+    height: 1.5em;
+    width: 20em;
   }
-
-  input[type="search"] {
-    outline: 0; 
-    width: 100%;
-    background: var(--color-light);
-    padding: 0 1.6rem;
-    border-radius: var(--rad);
-    appearance: none; 
-    transition: all var(--dur) var(--bez);
-    transition-property: width, border-radius;
-    z-index: 1;
-    position: relative;
-  }
-  input:not(:placeholder-shown) {
-    border-radius: var(--rad) 0 0 var(--rad);
-    width: calc(100% - var(--btn-width));
-     /* button {
-      display: block;
-    } */
-  }
-  label {
-    position: absolute;
-    clip: rect(1px, 1px, 1px, 1px);
-    padding: 0;
-    border: 0;
-    height: 1px;
-    width: 1px;
-    overflow: hidden;
-  }
-  
