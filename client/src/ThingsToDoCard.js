@@ -1,6 +1,8 @@
 import { Button, Card,Typography,CardContent } from "@mui/material"
 import { useState } from "react"
 import React from "react";
+import FavoriteIcon from '@mui/icons-material/Favorite';
+
 export default function ThingsToDoCard({things,user}){
 
    const[showButton,setShowButton] = useState(true)
@@ -50,8 +52,10 @@ export default function ThingsToDoCard({things,user}){
           Ratings(out of 5) {things.rating}
           </Typography>
           </CardContent>
+         
+          
           { showButton ?
-         <Button onClick = {handleClick}>♡</Button> :<Button> ❤️</Button>
+         <FavoriteIcon onClick = {handleClick}>♡</FavoriteIcon> :<Button> ❤️</Button>
           }
           </Card>
         </div>

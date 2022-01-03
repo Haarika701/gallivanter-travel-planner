@@ -20,16 +20,33 @@ export default function TripPlannerPage({plan}){
                console.log("deleted")
            })
         }
-      function  handleDateClick (arg) { // bind with an arrow function
+      
+        function  handleDateClick (arg) { // bind with an arrow function
             alert(arg.dateStr)
           }
-
           function handleCalendarClick(){
-              setShowChalender((showCalendar) => !(showCalendar))
-          }
+            setShowChalender((showCalendar) => !(showCalendar))
+        }
         
     return(
-        <div className="tripplanner-card">
+        <div className="tripplanner-view">
+            <div className="calendar-view">
+            {showCalendar ?
+               <Button onClick = {handleCalendarClick}>Show Calendar</Button> :
+                      <Button onClick = {handleCalendarClick}>Hide Calendar</Button>
+                    }
+            
+                    {showCalendar ? <FullCalendar
+                    plugins={[ dayGridPlugin,interactionPlugin,listPlugin]}
+                    dateClick={handleDateClick}
+                    initialView="dayGridMonth"
+                    events={[
+                        { title: plan.plan_name, start: plan.trip_start ,end: plan.trip_end ,display: 'background' }
+                      ]}
+                   /> :null
+            
+                    }
+            </div>
         <Card sx={{ maxWidth: 338 }}>
         <CardContent>
         <Typography gutterBottom variant = "h5">
@@ -45,26 +62,12 @@ export default function TripPlannerPage({plan}){
         Hotel Name:{plan.hotel_name}<br/>
         </Typography>
         </CardContent>
-        <hr/>
+        
+        <Button variant="primary" >Share with : Email</Button> 
         <Button variant="contained" size="small" onClick = {handleDelete}>Delete </Button>
-        </Card>{showCalendar ?
-          <Button onClick = {handleCalendarClick}>Show Calendar</Button> :
-          <Button onClick = {handleCalendarClick}>Hide Calendar</Button>
-        }
-
-        {showCalendar ? <FullCalendar
-        plugins={[ dayGridPlugin,interactionPlugin,listPlugin]}
-        dateClick={handleDateClick}
-        initialView="dayGridMonth"
-        events={[
-            { title: plan.plan_name, start: plan.trip_start ,end: plan.trip_end ,display: 'background' }
-          ]}
-       /> :null
-
-        }
-       
-       
-     
-        </div>
+        </Card>
+        
+     </div>
+        
     )
 }

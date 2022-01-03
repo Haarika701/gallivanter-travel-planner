@@ -6,7 +6,7 @@ import Error from "./Errors";
 
 export default function TripPlannerForm(){
 
-    
+  
     const [errors, setErrors] = useState([]);
     const [formData, setFormData] = useState({
     user_id: "",
@@ -23,8 +23,8 @@ export default function TripPlannerForm(){
     notes:""
   });
 
-
   
+
 
   const handleChange = (e) => {
     setFormData({
@@ -77,11 +77,10 @@ export default function TripPlannerForm(){
   }
 
     return (
+<>
+      
        
         <form  className="travelplanner" onSubmit={handleSubmit}>
-        
-         
-         
         {errors.map((err) => (<Error key={err}>{err}</Error>))}
         <legend>Trip Details</legend>
          <InputLabel htmlFor="user_id">Plan Number</InputLabel>
@@ -225,7 +224,9 @@ export default function TripPlannerForm(){
            <br/>
             <Button variant="contained" type="submit" >Save Plan</Button>
             </form>
-        
+               
+                       
+            </>                
         
     )
 }

@@ -3,12 +3,9 @@ import React from "react";
 
 export default function UserAccount({user,city,username,image,id}){
     
-    
-// const [updateName,setUpdatedName] = useState(username)
-// const[updateCity,setUpdateCity] = useState(city)
-// const [updateImg,setUpdateImg] = useState(image)
+
     function handleDelete(){
-        fetch("/users",{
+        fetch(`/users/${user.id}`,{
             method:"DELETE",
             headers:{
                 'Content-Type':'application/json'

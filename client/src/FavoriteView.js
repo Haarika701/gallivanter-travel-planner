@@ -1,6 +1,7 @@
 import {useEffect,useState} from "react"
 import FavoriteContainer from "./FavoriteContainer"
 import React from "react";
+
 export default function FavoriteView(){
 
    const [viewFavorites,setViewFavorites] = useState([])
@@ -18,6 +19,7 @@ export default function FavoriteView(){
         <div>
             View your favorites here!!
             <FavoriteContainer viewFavorites = {viewFavorites}/>
+              
         </div>
     )
 }

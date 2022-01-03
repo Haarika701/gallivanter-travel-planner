@@ -3,14 +3,19 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 
 import App from './App';
-
+import logo from './logo.png'
 
 ReactDOM.render(
   
   <React.StrictMode>
     <BrowserRouter>
-    <h1>Gallivanter: A Travel Itenary App</h1>
-    <App />           
+     <div className='header'> 
+      <img src = {logo}/> 
+      <h1>Gallivanter: A Travel Itenary App</h1>
+      </div> 
+     
+    <App /> 
+    
     </BrowserRouter>
   </React.StrictMode>,
   

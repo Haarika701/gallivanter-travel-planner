@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :things_to_dos,only:[:show,:index]
   resources :places,only:[:index,:show]
   resources :trip_planners,only:[:index,:create,:show,:destroy]
-  resources :users ,only:[:create,:show,:update]
+  resources :users ,only:[:create,:show,:update,:destroy]
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   post '/login', to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy'

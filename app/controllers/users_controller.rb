@@ -25,7 +25,7 @@ class UsersController < ApplicationController
     end
 
     def destroy
-      user = User.find_by_id(session[:user_id])
+      user = User.find(params[:id])
       user.destroy
       render json:{}
     end
