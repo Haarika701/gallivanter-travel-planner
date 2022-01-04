@@ -170,11 +170,11 @@ export default function SignupForm( {setUser, handleFormDisplay} ) {
             <br/>
          
             <Button variant = "contained"  type="submit">Sign Up</Button>
-            
-           
-       
-        <h4>Already have an account? <Button variant="contained"  onClick = {handleFormDisplay}>Log In Now!</Button></h4>
+     
         </form>
+        <div className="signupbutton">
+        <h4>Already have an account? <Button variant="contained"  onClick = {handleFormDisplay}>Log In Now!</Button></h4>
+        </div>
         </>
   );
 };

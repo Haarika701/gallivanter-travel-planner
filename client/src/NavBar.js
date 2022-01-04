@@ -1,7 +1,10 @@
 
 import { Link} from "react-router-dom"
 import React from "react";
-
+import MyLocationIcon from '@mui/icons-material/MyLocation';
+import SummarizeIcon from '@mui/icons-material/Summarize';
+import FlightTakeoffIcon from '@mui/icons-material/FlightTakeoff';
+import SupervisorAccountIcon from '@mui/icons-material/SupervisorAccount';
 function NavBar({user,setUser}){
 
  
@@ -13,10 +16,10 @@ function NavBar({user,setUser}){
       
         <ul>
        
-        <Link to = "/places">Places</Link>
-        <Link to = "/tripplanner">Trip Planner</Link> 
-        <Link to = "/favourites">Bucket List</Link>
-        <Link to = "/useraccount">Account</Link> 
+        <Link to = "/places">Places <MyLocationIcon fontSize="inherit"></MyLocationIcon> </Link>
+        <Link to = "/tripplanner">Trip Planner<SummarizeIcon fontSize="inherit"></SummarizeIcon></Link> 
+        <Link to = "/favourites">Bucket List<FlightTakeoffIcon fontSize="inherit"></FlightTakeoffIcon></Link>
+        <Link to = "/useraccount">Account<SupervisorAccountIcon fontSize="inherit"></SupervisorAccountIcon></Link> 
        
         </ul> 
       </div> 
