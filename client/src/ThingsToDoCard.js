@@ -2,7 +2,9 @@ import { Button, Card,Typography,CardContent } from "@mui/material"
 import { useState } from "react"
 import React from "react";
 import FavoriteIcon from '@mui/icons-material/Favorite';
-
+import ConfirmationNumberIcon from '@mui/icons-material/ConfirmationNumber';
+import MoneyIcon from '@mui/icons-material/Money';
+import ReviewsIcon from '@mui/icons-material/Reviews';
 export default function ThingsToDoCard({things,user}){
 
    const[showButton,setShowButton] = useState(true)
@@ -32,31 +34,31 @@ export default function ThingsToDoCard({things,user}){
 }
   return(
         <div className="things-card">
-         <Card sx={{ maxWidth: 350 }} >
-          <img src = {things.image} alt = "things" width="350px" height="250px"/>
+         <Card sx={{ maxWidth: 315 }} >
+          <img src = {things.image} alt = "things" width="350px" height="250px" />  
+          { showButton ?
+         <FavoriteIcon onClick = {handleClick}>♡</FavoriteIcon> :<Button> ❤️</Button>
+          }
           <CardContent>
           <Typography gutterBottom variant="h4">
           {things.name}
           </Typography>
-          <Typography variant="body3" color="text.secondary">
+          <Typography variant="body" color="text.secondary">
           {things.description}
           </Typography> <br/>
          <br/>
           <Typography gutterBottom variant="body3">
-          Category:{things.category}
+       <ConfirmationNumberIcon></ConfirmationNumberIcon>{things.category}
           </Typography><br/>
           <Typography gutterBottom variant="body3">
-          Expense:{things.expense}
+       <MoneyIcon></MoneyIcon>{things.expense}
           </Typography><br/>
-          <Typography gutterBottom variant="body3">
-          Ratings(out of 5) {things.rating}
+    <Typography gutterBottom variant="body3">
+    <ReviewsIcon></ReviewsIcon> {things.rating}
           </Typography>
           </CardContent>
          
-          
-          { showButton ?
-         <FavoriteIcon onClick = {handleClick}>♡</FavoriteIcon> :<Button> ❤️</Button>
-          }
+        
           </Card>
         </div>
     )

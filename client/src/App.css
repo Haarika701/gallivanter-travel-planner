@@ -74,7 +74,7 @@ width: 100%;
 } */
 
 .navbar {
-  margin-top: 19%;
+  margin-top: 20%;
   margin: auto;
   margin-bottom: 12px;
   padding-top: 3px;
@@ -91,21 +91,24 @@ width: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap; 
-    justify-content: space-around;
+    justify-content: space-evenly;
     margin-block-start: 1em;
     margin-block-end: 1em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     padding-inline-start: 35px;
     padding-inline-start: 35px;
+   
 }
 .navbar ul a {
   font-family: "Centra No2", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-
+  background-color: darkseagreen;
+  opacity: 0.9;
   text-decoration:none;
   text-align: center;
-  color: #3662D8;
+  color: navy;
   border-radius: 10px;
+  font-size: 18px;
   border: 2px solid black;
   padding: 14px 15px 14px;
   /* padding-right: 5px; */
@@ -182,35 +185,33 @@ width: 100%;
     margin-left: 33%;
     justify-content: center;
    
-   
-  }
-
-  .travelplanner{
-   
-
-  padding: 7px 0px;
-  margin-right: 10%;
-  text-align: center;
-  padding: 7px 0px;
-  font-size: 20px;
-  margin-left: 20%;
-  padding: 14px 50px;
-  width:  50%;
-  justify-content: center;
-  color: #0ABBDF;
   }
 
   .col{
     display: inline;
   }
 
-  /* .medium ui button{
-    display: inline;
-  } */
 
+  .travelplanner{
+  padding: 7px 0px;
+  margin-right: 10%;
+  text-align: left;
+  padding: 7px 0px;
+  font-size: 20px;
+  padding: 14px 50px;
+  width:  50%;
+  justify-content: left;
+  color: #0ABBDF;
+  display: block;
+  background-image: url('https://wallpaperaccess.com/full/1318015.jpg');
+  background-size: cover;
+  backface-visibility: visible;
+  
+  }
+
+  
   .travelplanner input {
     font-size: 1em;
-  
     border-radius: 7px;
     padding: 12px 20px;
     margin: 8px 0;
@@ -232,7 +233,6 @@ width: 100%;
     margin-bottom: 8px;
     border-radius: 5px;
     margin-top: 35px;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
    
   }
@@ -303,18 +303,45 @@ width: 100%;
        display: flex;
        flex-direction: row;
        flex-wrap: wrap;
-  }
-
-  .tripplanner-view{
-    margin-top: 5px;
-    margin-bottom: 5px;
-    margin-left: auto;
-    margin-right: 45px;
+       margin-left: 2%;
   }
 
   .tripplanner-card{
-    padding-left: 40px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    /* margin-left: auto; */
+    margin-right: 45px;
+  }
+
+  .tripplanner-card .MuiButton-root{
+   
+    margin-left: 14%;
+    margin-bottom: 3%;
+    
+  }
+
+  .tripplanner-card .MuiTypography-root{
+    color: blue;
+  }
+
+
+  .tripplanner-card{
+    /* padding-left: 40px; */
     justify-content: center;
+    text-align: left;
+    line-height: normal;
+  }
+
+ .tripplanner-card .MuiCardContent-root{
+   padding: 25px;
+
+ }
+  .calendar-view {
+    --fc-daygrid-event-dot-width:20px;
+    margin-top: 15%;
+    color: darkcyan;
+    margin-right: 10%;
+   
   }
 
   .things-view{
@@ -329,6 +356,43 @@ width: 100%;
     margin-bottom: 5px;
     margin-left: auto;
     margin-right: 45px;
+  }
+
+  .things-card img{
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .things-card img .MuiIcon-root{
+    position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #555;
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+  }
+
+  .things-card .MuiCardContent-root{
+    padding: 25px;
+  }
+
+  .things-card .MuiTypography-h4{
+       text-align: left;
+      color: navy;
+  }
+
+  .things-card .MuiTypography-body3{
+      text-align: left; 
+      padding-bottom: 3px;
+      
   }
 
   .search {
@@ -347,3 +411,4 @@ width: 100%;
     height: 1.5em;
     width: 20em;
   }
+

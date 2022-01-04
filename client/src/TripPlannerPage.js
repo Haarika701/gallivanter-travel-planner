@@ -4,7 +4,12 @@ import dayGridPlugin from '@fullcalendar/daygrid' // a plugin!
 import interactionPlugin from "@fullcalendar/interaction";
 import listPlugin from '@fullcalendar/list'
 import React,{useState} from "react";
-
+import DeleteIcon from '@mui/icons-material/Delete';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
+import EventIcon from '@mui/icons-material/Event';
+import LocalActivityIcon from '@mui/icons-material/LocalActivity';
+import HotelIcon from '@mui/icons-material/Hotel';
+import LoyaltyIcon from '@mui/icons-material/Loyalty';
 export default function TripPlannerPage({plan}){
   
     const [showCalendar,setShowChalender] = useState(false)
@@ -29,42 +34,53 @@ export default function TripPlannerPage({plan}){
         }
         
     return(
-        <div className="tripplanner-view">
+        <div className="tripplanner-card">
             <div className="calendar-view">
             {showCalendar ?
-               <Button onClick = {handleCalendarClick}>Show Calendar</Button> :
-                      <Button onClick = {handleCalendarClick}>Hide Calendar</Button>
+               <Button onClick = {handleCalendarClick}>Hide Calendar</Button> :
+                      <Button onClick = {handleCalendarClick}>Show Calendar</Button>
                     }
             
                     {showCalendar ? <FullCalendar
                     plugins={[ dayGridPlugin,interactionPlugin,listPlugin]}
                     dateClick={handleDateClick}
                     initialView="dayGridMonth"
-                    events={[
-                        { title: plan.plan_name, start: plan.trip_start ,end: plan.trip_end ,display: 'background' }
-                      ]}
+                    events={
+                        
+                     [
+
+                        {  
+                        start: plan.trip_start ,
+                        end: plan.trip_end ,
+                        display: 'background' ,
+                        title: plan.plan_name,
+                      
+                        },
+                        
+                      ]
+                     
+                      }
                    /> :null
             
                     }
             </div>
-        <Card sx={{ maxWidth: 338 }}>
+        <Card sx={{ maxWidth: 330 }}>
         <CardContent>
         <Typography gutterBottom variant = "h5">
-           {plan.plan_name}
+         
+   <LoyaltyIcon></LoyaltyIcon>{plan.plan_name}
         </Typography>
         <Typography gutterBottom variant = "body">
-        Destination:{plan.destination}
+        <LocationOnIcon></LocationOnIcon>  Destination:{plan.destination}
         </Typography><br/>
         <Typography gutterBottom variant = "body">
-        Trip Started at:{plan.trip_start}<br/>
-        Trip Ended at:{plan.trip_end}<br/>
-        Activities:{plan.trip_activities}<br/>
-        Hotel Name:{plan.hotel_name}<br/>
+        <EventIcon ></EventIcon>Trip Start Date:{plan.trip_start}<br/>
+       <EventIcon></EventIcon> Trip End End:{plan.trip_end}<br/>
+     <LocalActivityIcon></LocalActivityIcon>Activities:{plan.trip_activities}<br/>
+     <HotelIcon></HotelIcon>Hotel Name:{plan.hotel_name}<br/>
         </Typography>
         </CardContent>
-        
-        <Button variant="primary" >Share with : Email</Button> 
-        <Button variant="contained" size="small" onClick = {handleDelete}>Delete </Button>
+        <Button variant="contained" size="small" onClick = {handleDelete}><DeleteIcon></DeleteIcon></Button>
         </Card>
         
      </div>
