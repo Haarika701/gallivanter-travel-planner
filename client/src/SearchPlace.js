@@ -1,11 +1,11 @@
 import React from "react";
-import { TextField } from "@mui/material";
-import InputBase from '@mui/material/InputBase';
+import SearchSharpIcon from '@mui/icons-material/SearchSharp';
 export default function SearchPlace({search,setSearch}){
     return (
         
          <div className = "search">
               <form className="searchbar" >
+               <SearchSharpIcon  fontSize="medium"></SearchSharpIcon> 
               <input  label="Search " type="search"
               type="text"
               aria-autocomplete="list"
@@ -15,7 +15,7 @@ export default function SearchPlace({search,setSearch}){
               onChange={(e) => setSearch(e.target.value)}
              
             />
-         
+        
                </form>
         </div>
     )

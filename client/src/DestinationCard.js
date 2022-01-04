@@ -12,7 +12,8 @@ import {useHistory} from "react-router-dom"
       
         <div class = "destination-card"> 
            <Card sx={{ maxWidth: 250 }} >
-        <img src = {destinations.image} alt = "place" width="250px" height="250px"onClick ={()=> history.push(`places/${destinations.id}`)}/>
+            <img src = {destinations.image} alt = "place" width="250px" height="200px"onClick ={()=> history.push(`places/${destinations.id}`)}/>
+         
          <CardContent> 
          <Typography variant="h5" component="div">
            {destinations.city} 

@@ -1,6 +1,6 @@
 
 import './App.css'
-import { Button} from "@mui/material"
+
 import FavoriteView from './FavoriteView'
 import { Route, Switch } from 'react-router-dom'
 import TripPlannerview from "./TripPlannerview"
@@ -44,13 +44,11 @@ function App() {
     <div className="App-Container">
    
       <div className='user'>
-      {user ? <Button variant="contained"onClick = {handleLogout}>Logout!</Button> : null} 
+      {user ? <button variant="contained"onClick = {handleLogout}>Logout!</button> : null} 
          <img src = {user.image} alt = "user"/>
           <p>Hi,{user.username}!!</p>
-         
         </div>
-    
-   
+       
     <NavBar/>
     
            {
