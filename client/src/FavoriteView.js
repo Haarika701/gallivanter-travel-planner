@@ -17,7 +17,7 @@ export default function FavoriteView(){
   
     return (
         <div className="favorite-view">
-            View your favorites here!!
+            <h2>Your Favorite Places For Your Next Trip!</h2>
             <FavoriteContainer viewFavorites = {viewFavorites}/>
               
         </div>

@@ -80,7 +80,7 @@ width: 100%;
 .navbar {
   margin-top: 20%;
   margin: auto;
-  margin-bottom: 12px;
+ 
   padding-top: 3px;
   padding-bottom: 2px;
   height: 5%;
@@ -95,7 +95,7 @@ width: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap; 
-    justify-content: space-evenly;
+    justify-content: space-around;
     margin-block-start: 1em;
     margin-block-end: 1em;
     margin-inline-start: 0px;
@@ -404,21 +404,26 @@ width: 100%;
       
   }
 
-  .search {
-   
+.search{
+  margin-top: 2.3%;
+}
+
+ form .searchbar {
+  display: flex;
     font-size: 1.5em;
-    margin-top: 3%;
     margin-top: 1px solid black;
     color: #141d38;
+    
   }
   .search input{
     padding-left: 55px;
-    font-size: 1em;
+    font-size: 1.5em;
     border: 2px solid black;
     border-radius: 30px;
     margin: 4px;
     height: 1.5em;
-    width: 20em;
+    width: 18em;
+    margin-left: 5%;
   }
 
   select {
@@ -454,18 +459,46 @@ button, input, select, textarea ,label{
   width: 20%;
 }
 
-.favorite-card{
+.favorite-card .MuiCard-root{
   margin-top: 25px;
   margin-bottom: 5px;
-  /* margin-left: auto; */
   margin-right: 45px;
+  transition: 0.3s;
 }
 
-.favorite-card .MuiCard-root{
-  
- 
-  flex-direction: row;
-  
+
+
+.favorite-card .MuiCard-root:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.favorite-card .MuiCardContent-root{
+  padding: 18px;
+}
+
+.favorite-card .MuiTypography-h4{
+  text-align: left;
+  color: #141d38;
+  padding-top: 5px;
+}
+
+.favorite-card .MuiTypography-body{
+  text-align: left; 
+  padding-bottom: 3px;
+  margin-bottom: 5%;
+}
+
+.favorite-card .MuiTypography-body3{
+  text-align: left; 
+  padding-top: 10px;
+}
+
+.favorite-card .MuiIcon-root{
+  padding-top: 10px;
+}
+
+.favorite-card .MuiCardContent-root{
+  padding: 18px;
 }
 
 .favorite-container{
@@ -477,7 +510,6 @@ button, input, select, textarea ,label{
 }
 
 .favorite-view{
-  
     margin-top: 5px;
     margin-right: 4px;
     color: #031E51;

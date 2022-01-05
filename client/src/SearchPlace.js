@@ -5,17 +5,15 @@ export default function SearchPlace({search,setSearch}){
         
          <div className = "search">
               <form className="searchbar" >
-               <SearchSharpIcon  fontSize="medium"></SearchSharpIcon> 
-              <input  label="Search " type="search"
+              <input  
               type="text"
-              aria-autocomplete="list"
-              placeholder="Where to..."
+              placeholder="Search..."
               value={search}
-              role="searchbox"
+              role="searchbox" 
               onChange={(e) => setSearch(e.target.value)}
              
             />
-        
+       
                </form>
         </div>
     )
