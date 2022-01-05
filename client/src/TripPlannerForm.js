@@ -41,9 +41,9 @@ export default function TripPlannerForm(){
 
 
   const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
+    setFormData((currentPlans) =>{
+     return {...currentPlans,
+      [e.target.name]: e.target.value} 
     });
   };
 

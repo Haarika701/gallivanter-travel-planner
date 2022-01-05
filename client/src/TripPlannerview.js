@@ -20,7 +20,10 @@ function TripPlannerview({user}){
                       { showForm ?
                           <Button variant="outlined"  onClick = {handleForm}>Hide Create New Plan Form</Button>:<Button  variant="outlined" onClick = {handleForm}> Create New Plan Form</Button> }
                       {showForm ?<TripPlannerForm user={user}/> : null}  
+
+                      <div className="colorcard">            
                         <TripplannerCard user={user}/>  
+                        </div>
                        
                     </Route>
            </Switch> 

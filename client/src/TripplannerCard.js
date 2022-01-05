@@ -3,6 +3,7 @@ import TripplannerContainer from "./TripplannerContainer";
 import React from "react";
 
 
+
 export default function TripplannerCard(){
 const [showPlans,setShowPlans] = useState([])
 
@@ -17,7 +18,7 @@ useEffect(() => {
 
     return(
         <div class = "tripplanner-view">
-                 <TripplannerContainer showPlans={showPlans}/>
+                 <TripplannerContainer showPlans={showPlans} />
         </div>
     )
 }
