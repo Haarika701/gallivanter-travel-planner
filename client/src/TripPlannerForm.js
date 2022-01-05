@@ -65,6 +65,7 @@ export default function TripPlannerForm(){
           console.log(data);
           
           setFormData({
+            user_id:"",
             plan_name: "",
             destination: "",
             hotel_name: "",

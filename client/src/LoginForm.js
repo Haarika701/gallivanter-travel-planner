@@ -51,7 +51,7 @@ export default function LoginForm ( {setUser, handleFormDisplay} ) {
     return (
      
           <form className = "signup-login-form" onSubmit={handleSubmit}>
-          <h4>Log into your account</h4>
+          <h2>Log In</h2>
           {errors.map((err) => (<Error key={err}>{err}</Error>))}
           <PersonIcon>
           <label htmlFor="username">Username</label>
@@ -82,7 +82,7 @@ export default function LoginForm ( {setUser, handleFormDisplay} ) {
           <Button variant="contained" size="medium" type="submit">Sign In</Button><br></br>
 
           <div className="col">
-          <h4>Don't have an account yet? <Button variant="contained" color="success"className="medium ui button" onClick = {handleFormDisplay}>Sign Up Now!</Button></h4>
+          <h4>Don't have an account yet? <Button variant="contained" color="primary"className="medium ui button" onClick = {handleFormDisplay}>Sign Up Now!</Button></h4>
           </div>
           </form>
     

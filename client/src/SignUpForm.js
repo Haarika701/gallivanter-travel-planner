@@ -66,7 +66,7 @@ export default function SignupForm( {setUser, handleFormDisplay} ) {
   return (
     <>
        <form  className="signup-form" onSubmit={handleSubmit}>
-        <h4>Sign up for an account</h4>       
+        <h2>Sign Up</h2>       
         {errors.map((err) => (<Error key={err}>{err}</Error>))}
        <BadgeIcon>
         <label variant="outlined" htmlFor="first">First Name</label>

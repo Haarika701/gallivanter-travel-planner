@@ -5,6 +5,7 @@ import TripPlannerForm from "./TripPlannerForm"
 import {Button} from "@mui/material"
 import { useState } from "react"
 import React from "react";
+
 function TripPlannerview({user}){
     const [showForm,setShowForm] = useState(false)
     
@@ -17,9 +18,10 @@ function TripPlannerview({user}){
            <Switch>
                     <Route exact path= "/tripplanner">
                       { showForm ?
-                          <Button  variant="dashed" sx={{ m: 1 }} onClick = {handleForm}>Hide Create New Plan Form</Button>:<Button  variant="dashed" sx={{ m: 1 }} onClick = {handleForm}> Create New Plan Form</Button> }
+                          <Button variant="outlined"  onClick = {handleForm}>Hide Create New Plan Form</Button>:<Button  variant="outlined" onClick = {handleForm}> Create New Plan Form</Button> }
                       {showForm ?<TripPlannerForm user={user}/> : null}  
-                        <TripplannerCard user={user}/>    
+                        <TripplannerCard user={user}/>  
+                       
                     </Route>
            </Switch> 
         </div>
