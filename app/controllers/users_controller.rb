@@ -34,11 +34,6 @@ class UsersController < ApplicationController
       def user_params
         params.permit(:first_name, :last_name, :city, :image, :username, :email, :password, :password_confirmation)
     end
-  
-
-    def edit_user
-      params.permit(:username,:city,:image)
-    end
 
 
 end
