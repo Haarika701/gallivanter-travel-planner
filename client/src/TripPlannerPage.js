@@ -53,7 +53,7 @@ export default function TripPlannerPage({plan}){
                         start: plan.trip_start ,
                         end: plan.trip_end ,
                         display: 'background' ,
-                        title: plan.plan_name,
+                        title: plan.plan_name
                       
                         },
                         
@@ -68,7 +68,7 @@ export default function TripPlannerPage({plan}){
         <CardContent>
         <Typography gutterBottom variant = "h5">
          
-   <LoyaltyIcon></LoyaltyIcon>{plan.plan_name}
+        <LoyaltyIcon></LoyaltyIcon>{plan.plan_name}
         </Typography>
         <Typography gutterBottom variant = "body">
         <LocationOnIcon></LocationOnIcon>  Destination:{plan.destination}

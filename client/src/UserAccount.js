@@ -1,5 +1,7 @@
 // import { useState } from "react"
 import React from "react";
+import {Button} from "@mui/material"
+import BadgeIcon from '@mui/icons-material/Badge';
 
 export default function UserAccount({user}){
     
@@ -20,15 +22,15 @@ export default function UserAccount({user}){
 
        
     return (
-        <div>
-        <img src={user.image} alt="user"/>
-        <h3> Username {user.username}</h3> 
-        <h3> City {user.city}</h3>
-       {/* <input {user.city}/> */}
-        <h3>Email {user.email}</h3>
-        <button onClick={handleDelete}>Delete Account</button>
-        {/* <button onClick={handleEdit}>Edit Info</button> */}
-       
+        <div className="useraccount">
+         <img src={user.image} alt="user"/>
+         <h3> Username</h3> 
+         {user.username}
+         <h3> City</h3> 
+         {user.city}
+         <h3>Email</h3>
+         {user.email}<br></br>
+         <Button variant="contained" onClick={handleDelete}>Delete Account</Button>
         </div>
     )
 }
