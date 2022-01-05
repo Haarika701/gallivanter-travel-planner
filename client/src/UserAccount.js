@@ -3,7 +3,7 @@ import React from "react";
 import {Button} from "@mui/material"
 
 
-export default function UserAccount({user}){
+export default function UserAccount({user,setUser}){
     
 
     function handleDelete(){
@@ -15,8 +15,9 @@ export default function UserAccount({user}){
             },
             
         }).then((res)=> (res.json()))
-            .then(() => {
+            .then((data) => {
                 console.log("deleted")
+                
             })
          }
 
