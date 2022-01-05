@@ -16,7 +16,7 @@ export default function FavoriteView(){
     },[])
   
     return (
-        <div>
+        <div className="favorite-view">
             View your favorites here!!
             <FavoriteContainer viewFavorites = {viewFavorites}/>
               

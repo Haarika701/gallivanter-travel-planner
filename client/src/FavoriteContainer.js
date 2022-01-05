@@ -4,7 +4,7 @@ export default function FavoriteContainer({viewFavorites}){
 
     const displayFavorite = viewFavorites.map((favorite) => {return <FavoriteCard key = {favorite.id} favorite={favorite} />})
     return(
-        <div>
+        <div className="favorite-container">
        {displayFavorite}
         </div>
     )
