@@ -1,7 +1,8 @@
 import React, {useState} from "react"
 import Error from "./Errors";
 import Button from '@mui/material/Button';
-import { FormControl } from "@mui/material";
+import PersonIcon from '@mui/icons-material/Person';
+import PasswordIcon from '@mui/icons-material/Password';
 
 export default function LoginForm ( {setUser, handleFormDisplay} ) {
   const [errors, setErrors] = useState([]);
@@ -50,33 +51,39 @@ export default function LoginForm ( {setUser, handleFormDisplay} ) {
     return (
      
           <form className = "signup-login-form" onSubmit={handleSubmit}>
-          <h4>Log into your account</h4><hr/>
+          <h4>Log into your account</h4>
           {errors.map((err) => (<Error key={err}>{err}</Error>))}
-
-          <label htmlFor="username">Username:</label>
+          <PersonIcon>
+          <label htmlFor="username">Username</label>
+          </PersonIcon>
           <input
               id="username-login-input"
               type="text"
               name="username"
+              placeholder="username"
               value={formData.username}
               onChange={handleChange}
           />
           <br/>
-
-          <label htmlFor="password">Password:</label>
+         
+         <PasswordIcon>
+          <label htmlFor="password">Password</label>
+          </PasswordIcon>
           <input
               id="password-login-input"
               type="password"
               name="password"
+              placeholder="password"
               value={formData.password}
               onChange={handleChange}
           />
          
            <br/>
           <Button variant="contained" size="medium" type="submit">Sign In</Button><br></br>
-        
+
+          <div className="col">
           <h4>Don't have an account yet? <Button variant="contained" color="success"className="medium ui button" onClick = {handleFormDisplay}>Sign Up Now!</Button></h4>
-        
+          </div>
           </form>
     
     );

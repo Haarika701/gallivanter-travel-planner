@@ -4,6 +4,7 @@ import TripplannerCard  from "./TripplannerCard"
 import TripPlannerForm from "./TripPlannerForm"
 import {Button} from "@mui/material"
 import { useState } from "react"
+import React from "react";
 function TripPlannerview({user}){
     const [showForm,setShowForm] = useState(false)
     
