@@ -66,7 +66,7 @@ export default function SignupForm( {setUser, handleFormDisplay} ) {
   return (
     <>
        <form  className="signup-form" onSubmit={handleSubmit}>
-        <h4>Sign up for an account</h4>       
+        <h2>Sign Up</h2>       
         {errors.map((err) => (<Error key={err}>{err}</Error>))}
        <BadgeIcon>
         <label variant="outlined" htmlFor="first">First Name</label>
@@ -80,7 +80,7 @@ export default function SignupForm( {setUser, handleFormDisplay} ) {
                 onChange={handleChange}
             />
         
-           
+           <br/>
             <BadgeIcon> 
             <label variant="outlined" htmlFor="last_name">Last Name:</label>
             </BadgeIcon>
@@ -93,7 +93,7 @@ export default function SignupForm( {setUser, handleFormDisplay} ) {
                 onChange={handleChange}
             />
            
-            
+            <br/>
             <LocationCityIcon>
             <label  variant="outlined" htmlFor="city">City:</label>
             </LocationCityIcon>
@@ -106,7 +106,7 @@ export default function SignupForm( {setUser, handleFormDisplay} ) {
                 onChange={handleChange}
             />
             
-          
+          <br/>
            <PortraitIcon>
             <label variant="outlined" htmlFor="image">Profile Picture:</label>
             </PortraitIcon>
@@ -118,7 +118,7 @@ export default function SignupForm( {setUser, handleFormDisplay} ) {
                 value={formData.image}
                 onChange={handleChange}
             />
-            
+            <br/>
             <PersonIcon>
             <label  variant="outlined" htmlFor="username">Username:</label>
             </PersonIcon>
@@ -130,7 +130,7 @@ export default function SignupForm( {setUser, handleFormDisplay} ) {
                 value={formData.username}
                 onChange={handleChange}
             />
-         
+         <br/>
             <EmailIcon>
             <label  variant="outlined" htmlFor="email">Email:</label>
             </EmailIcon>
@@ -142,7 +142,7 @@ export default function SignupForm( {setUser, handleFormDisplay} ) {
                 value={formData.email}
                 onChange={handleChange}
             />
-           
+           <br/>
            <PasswordIcon>
             <label variant="outlined" htmlFor="password">Password:</label>
             </PasswordIcon>
@@ -154,7 +154,7 @@ export default function SignupForm( {setUser, handleFormDisplay} ) {
                 value={formData.password}
                 onChange={handleChange}
             />
-           
+           <br/>
             <CheckIcon>
             <label  variant="outlined" htmlFor="password_confirmation">Confirm Password:</label>
             </CheckIcon>
@@ -166,8 +166,9 @@ export default function SignupForm( {setUser, handleFormDisplay} ) {
                 value={formData.password_confirmation}
                 onChange={handleChange}
             />
+            <br/>
             <Button variant = "contained"  type="submit">Sign Up</Button>
-     
+     <br/>
         </form>
         <div className="signupbutton">
         <h4>Already have an account? <Button variant="contained"  onClick = {handleFormDisplay}>Log In Now!</Button></h4>

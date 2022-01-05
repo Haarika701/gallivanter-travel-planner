@@ -1,9 +1,9 @@
-// import { useState } from "react"
+
 import React from "react";
 import {Button} from "@mui/material"
-import BadgeIcon from '@mui/icons-material/Badge';
 
-export default function UserAccount({user}){
+
+export default function UserAccount({user,setUser}){
     
 
     function handleDelete(){
@@ -15,8 +15,9 @@ export default function UserAccount({user}){
             },
             
         }).then((res)=> (res.json()))
-            .then(() => {
+            .then((data) => {
                 console.log("deleted")
+                
             })
          }
 

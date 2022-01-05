@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   delete '/logout', to: 'sessions#destroy'
   get '/me', to: 'users#show'
   get '/favoritethings',to:'favorites#show'
-  get '/tripplanners',to:'trip_planners#show'
+  get '/trip_planner',to:'trip_planners#show'
   
   get "*path", to: "fallback#index", constraints: ->(req) { !req.xhr? && req.format.html? }
 end

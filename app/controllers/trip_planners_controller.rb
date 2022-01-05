@@ -10,8 +10,8 @@ class TripPlannersController < ApplicationController
 
     def show 
         user = User.find_by_id(session[:user_id])
-        trip_plans = user.trip_planners
-        render json: trip_plans, status: :ok
+        trip_planner = user.trip_planners
+        render json: trip_planner, status: :ok
     end
 
     def create 

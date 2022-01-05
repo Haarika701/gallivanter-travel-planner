@@ -48,13 +48,13 @@ width: 100%;
   outline: none;
   border:none;
   border-radius: 5px;
-  background-color: #10BBE5;
+ background-color: #053C87;
   border-radius: 4px;
   transition: all 0.5s;
   cursor: pointer;
   margin-right: 6%;
   height: 5%;
-  color: #053C87;
+  color: white;
 }
 
 .user p{
@@ -117,30 +117,32 @@ width: 100%;
 
  .signup-form{
   padding: 7px 0px;
-  
+  margin-right: 10%;
   text-align: center;
   padding: 7px 0px;
   font-size: 20px;
   padding: 14px 50px;
   width:  50%;
   justify-content: center;
- 
   color: #053C87;
+  display: block;
+  margin-left:20%;
 }
 
 
  .signup-form input {
-    margin-left: 20%;
-    font-size: 1em;
-    border-radius: 7px;
-    padding: 12px 20px;
-    margin: 8px 0;
-    border: 2px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    color: #053C87;
-    width:  55%;
-    margin: 5px 10px 5px 0;
+  margin-left: 20%;
+  font-size: 1em;
+  border-radius: 7px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: #053C87;
+  width:  55%;
+  
+  margin: 5px 10px 5px 0;
   }
 
   
@@ -191,8 +193,8 @@ width: 100%;
 
   .travelplanner{
   padding: 7px 0px;
-  margin-right: 10%;
-  text-align: left;
+  margin-left: 18%;
+  text-align: center;
   padding: 7px 0px;
   font-size: 20px;
   padding: 14px 50px;
@@ -233,7 +235,7 @@ width: 100%;
   }
 
   .destination-card .MuiCard-root:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 8px 16px 0 rgba(36, 84, 150,0.9);
   }
 
   .destination-view{
@@ -300,7 +302,7 @@ width: 100%;
   }
 
   .tripplanner-card{
-    margin-top: 5px;
+    margin-top: 5%;
     margin-bottom: 5px;
     /* margin-left: auto; */
     margin-right: 45px;
@@ -318,6 +320,19 @@ width: 100%;
     color: #053C87;
   }
 
+  .colorcard .MuiCard-root{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 8px;
+    border-radius: 5px;
+    margin-top: 35px;
+    transition: 0.3s;
+  }
+
+  .colorcard .MuiCard-root:hover {
+    box-shadow: 0 8px 16px 0 rgba(36, 84, 150,0.9);
+  }
 
   .tripplanner-card{
     /* padding-left: 40px; */
@@ -354,6 +369,19 @@ width: 100%;
     /* margin-left: auto; */
     margin-right: 45px;
   }
+
+  .things-card .MuiCard-root{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 8px;
+    border-radius: 5px;
+    margin-top: 35px;
+    transition: 0.3s;}
+
+    .things-card .MuiCard-root:hover {
+      box-shadow: 0 8px 16px 0 rgba(36, 84, 150,0.9);
+    }
 
   .things-card img{
     position: relative;
@@ -447,7 +475,7 @@ width: 100%;
 
 
 .favorite-card .MuiCard-root:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 8px 16px 0 rgba(36, 84, 150,0.9);
 }
 
 .favorite-card .MuiCardContent-root{

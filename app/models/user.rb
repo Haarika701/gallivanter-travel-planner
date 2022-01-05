@@ -7,7 +7,8 @@ class User < ApplicationRecord
     has_many :trip_planners
 
     validates :first_name, :username, :email, :password, :password_confirmation, presence: true
+    validates :username, :email, uniqueness: true
+    validates :username, :password,presence: true 
     validates :username, uniqueness: true
-    validates :username,:password, presence: true 
-    validates :password, length: { minimum: 8 }
+    validates :password, length: { minimum: 5 }
 end

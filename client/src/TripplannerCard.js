@@ -2,13 +2,15 @@ import { useEffect, useState } from "react"
 import TripplannerContainer from "./TripplannerContainer";
 import React from "react";
 
+
+
 export default function TripplannerCard(){
 const [showPlans,setShowPlans] = useState([])
 
 
  
 useEffect(() => {
-    fetch("/tripplanners")
+    fetch("/trip_planner")
     .then((res) => res.json())
     .then((data) => setShowPlans(data))
     
@@ -16,7 +18,7 @@ useEffect(() => {
 
     return(
         <div class = "tripplanner-view">
-                 <TripplannerContainer showPlans={showPlans}/>
+                 <TripplannerContainer showPlans={showPlans} />
         </div>
     )
 }
