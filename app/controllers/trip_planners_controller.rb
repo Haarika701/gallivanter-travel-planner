@@ -16,7 +16,9 @@ class TripPlannersController < ApplicationController
 
     def create 
         # user = @current_user
-        tripplanner = TripPlanner.create!(planner_params)
+        tripplanner = TripPlanner.new(planner_params)
+        tripplanner.user_id = session[:user_id]
+        tripplanner.save!
         render json: tripplanner,status: :created,each_serializer:TripPlannerShowSerializer
     end
 
