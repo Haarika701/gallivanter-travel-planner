@@ -2,9 +2,9 @@
 
 # Project Owner
   Haarika Ramadugu
-        - GitHub userName: Haarika701
-        - Email: hramadugu@gmail.com
-        - LinkedIn: https://www.linkedin.com/in/hr-83427b205/
+  - GitHub userName: Haarika701
+  - Email: hramadugu@gmail.com
+  - LinkedIn: https://www.linkedin.com/in/hr-83427b205/
         
 # What is this app about?
   This app allows the users to create and store travel itenaries which can be viewed at one place.
