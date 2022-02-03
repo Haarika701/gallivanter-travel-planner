@@ -35,31 +35,29 @@ export default function ThingsToDoCard({things,user}){
   return(
         <div className="things-card">
          <Card sx={{ maxWidth: 315 }} >
-          <img src = {things.image} alt = "things" width="350px" height="250px" />  
-          { showButton ?
-         <FavoriteIcon onClick = {handleClick}>♡</FavoriteIcon> :<Button> ❤️</Button>
-          }
-          <CardContent>
-          <Typography gutterBottom variant="h4">
-          {things.name}
-          </Typography>
+           <img src = {things.image} alt = "things" width="350px" height="250px" />  
+           { showButton ?
+             <FavoriteIcon onClick = {handleClick}>♡</FavoriteIcon> :<Button> ❤️</Button>
+           }
+           <CardContent>
+           <Typography gutterBottom variant="h4">
+             {things.name}
+           </Typography>
           <Typography variant="body" color="text.secondary">
-          {things.description}
-          </Typography> <br/>
-         <br/>
+            {things.description}
+           </Typography> <br/>
+             <br/>
           <Typography gutterBottom variant="body3">
-       <ConfirmationNumberIcon></ConfirmationNumberIcon>{things.category}
+          <ConfirmationNumberIcon></ConfirmationNumberIcon>{things.category}
           </Typography><br/>
           <Typography gutterBottom variant="body3">
-       <MoneyIcon></MoneyIcon>{things.expense}
+          <MoneyIcon></MoneyIcon>{things.expense}
           </Typography><br/>
-    <Typography gutterBottom variant="body3">
-    <ReviewsIcon></ReviewsIcon> {things.rating}
+          <Typography gutterBottom variant="body3">
+          <ReviewsIcon></ReviewsIcon> {things.rating}
           </Typography>
           </CardContent>
-         
-        
-          </Card>
+        </Card>
         </div>
     )
 }

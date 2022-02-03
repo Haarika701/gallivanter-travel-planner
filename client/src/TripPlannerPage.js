@@ -7,6 +7,7 @@ import LocalActivityIcon from '@mui/icons-material/LocalActivity';
 import HotelIcon from '@mui/icons-material/Hotel';
 import LoyaltyIcon from '@mui/icons-material/Loyalty';
 import TripCalendar from "./TripCalendar";
+
 export default function TripPlannerPage({plan}){
   
     
@@ -26,6 +27,8 @@ export default function TripPlannerPage({plan}){
        
         
     return(
+        
+        
         <div className="tripplanner-card">
          
         <Card sx={{ maxWidth: 330 }}>
@@ -40,8 +43,8 @@ export default function TripPlannerPage({plan}){
         <Typography gutterBottom variant = "body">
         <EventIcon ></EventIcon>Trip Start Date:{plan.trip_start}<br/>
        <EventIcon></EventIcon> Trip End End:{plan.trip_end}<br/>
-     <LocalActivityIcon></LocalActivityIcon>Activities:{plan.trip_activities}<br/>
-     <HotelIcon></HotelIcon>Hotel Name:{plan.hotel_name}<br/>
+        <LocalActivityIcon></LocalActivityIcon>Activities:{plan.trip_activities}<br/>
+        <HotelIcon></HotelIcon>Hotel Name:{plan.hotel_name}<br/>
         </Typography>
         <TripCalendar plan= {plan}/>
         </CardContent>
@@ -50,6 +53,6 @@ export default function TripPlannerPage({plan}){
         </Card>
         
      </div>
-        
+      
     )
 }

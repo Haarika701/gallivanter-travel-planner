@@ -17,10 +17,11 @@ function TripPlannerview({user}){
         <div class = "tripplanner-view">
            <Switch>
                     <Route exact path= "/tripplanner">
-                      { showForm ?
+                        <div className="tripplanner-button">
+                       { showForm ?
                           <Button variant="outlined"  onClick = {handleForm}>Hide Create New Plan Form</Button>:<Button  variant="outlined" onClick = {handleForm}> Create New Plan Form</Button> }
                       {showForm ?<TripPlannerForm user={user}/> : null}  
-
+                      </div>
                       <div className="colorcard">            
                         <TripplannerCard user={user}/>  
                         </div>

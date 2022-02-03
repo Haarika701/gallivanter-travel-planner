@@ -3,7 +3,7 @@ body {
 font-size: medium;
     font-family: Arial,Tahoma,Bitstream Vera Sans,sans-serif;
     -webkit-font-smoothing: antialiased;
-    background-color: #ebf4fe;
+    background-color: whitesmoke;
 text-align: left;
 padding: 10px; 
 width: 100%;
@@ -27,8 +27,6 @@ width: 100%;
   font-size: 16px;
   color: #053C87;
 }
-
-
 
  .user{
 
@@ -103,7 +101,7 @@ width: 100%;
    
 }
 .navbar ul a {
-  background-color: #FEF5EB;
+  background-color: #CEEAF3F3;
   opacity: 0.9;
   text-decoration:none;
   text-align: center;
@@ -142,11 +140,8 @@ width: 100%;
   box-sizing: border-box;
   color: #053C87;
   width:  55%;
-  
   margin: 5px 10px 5px 0;
   }
-
-  
 
   .signup-form h4{
     margin-top: 2.5%;
@@ -162,7 +157,6 @@ width: 100%;
   padding: 14px 50px;
   width:  50%;
   justify-content: center;
- 
   color: #053C87;
   }
 
@@ -191,25 +185,22 @@ width: 100%;
     display: inline;
   }
 
-
   .travelplanner{
-  padding: 7px 0px;
-  margin-left: 18%;
+  margin-top: 5%;
+  padding: 6px 0px;
   text-align: center;
   padding: 7px 0px;
   font-size: 20px;
-  padding: 14px 50px;
-  width:  50%;
+  padding: 18px 49px;
+  width:  60%;
   justify-content: left;
   color: #053C87;
   display: block;
   background-image: url('https://wallpaperaccess.com/full/1318015.jpg');
   background-size: cover;
   backface-visibility: visible;
-  
   }
 
-  
   .travelplanner input {
     font-size: 1em;
     border-radius: 7px;
@@ -223,7 +214,10 @@ width: 100%;
     margin: 5px 10px 5px 0;
   }
 
-  
+  .tripplanner-button {
+   margin-left: 9%;
+   align-items: center;
+  }
 
  .destination-card .MuiCard-root{
     display: flex;
@@ -233,6 +227,10 @@ width: 100%;
     border-radius: 5px;
     margin-top: 35px;
     transition: 0.3s;
+  }
+
+  .tripplanner-view{
+    margin-right: 7%;
   }
 
   .destination-card .MuiCard-root:hover {
@@ -281,7 +279,6 @@ width: 100%;
   }
 
   .user img{
-
   border: 1px solid #ddd;
   border-radius: 50%;
   padding: 5px;
@@ -305,7 +302,6 @@ width: 100%;
   .tripplanner-card{
     margin-top: 5%;
     margin-bottom: 5px;
-    /* margin-left: auto; */
     margin-right: 45px;
     color: #053C87;
   }

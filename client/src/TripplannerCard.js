@@ -7,8 +7,6 @@ import React from "react";
 export default function TripplannerCard(){
 const [showPlans,setShowPlans] = useState([])
 
-
- 
 useEffect(() => {
     fetch("/trip_planner")
     .then((res) => res.json())

@@ -5,7 +5,7 @@ import React from "react";
 import {useHistory} from "react-router-dom"
 
 
- function DestinationCard({destinations,user}){
+ function DestinationCard({destinations}){
     let history = useHistory();
 
     return (
@@ -13,17 +13,15 @@ import {useHistory} from "react-router-dom"
         <div class = "destination-card"> 
            <Card sx={{ maxWidth: 250 }} >
             <img src = {destinations.image} alt = "place" width="250px" height="200px"onClick ={()=> history.push(`places/${destinations.id}`)}/>
-         
-         <CardContent> 
-         <Typography variant="h5" component="div">
-           {destinations.city} 
-        </Typography> 
-        <Typography variant="body2"> 
-           {destinations.country}
-         </Typography> 
-         </CardContent> 
-         </Card>   
-        
+               <CardContent> 
+               <Typography variant="h5" component="div">
+               {destinations.city} 
+               </Typography> 
+               <Typography variant="body2"> 
+               {destinations.country}
+               </Typography> 
+               </CardContent> 
+          </Card>   
         </div>
     )
 }

@@ -31,13 +31,12 @@ export default function DestinationContainer({user}){
         <> 
             <Switch> 
              <Route exact path= "/places">
-             <SearchPlace search={search} setSearch={setSearch}/>
-             <DestinationView allDestination= {filterPlaces} user = {user} />
+                <SearchPlace search={search} setSearch={setSearch}/>
+                <DestinationView allDestination= {filterPlaces} user = {user} />
              </Route>
              <Route path="/places/:destinations" >
-              <ThingsToDoRender user ={user} /> 
-            </Route>
-           
+                <ThingsToDoRender user ={user} /> 
+             </Route>
              </Switch> 
         </>
     )
