@@ -1,9 +1,7 @@
 class TripPlannersController < ApplicationController
  rescue_from ActiveRecord::RecordInvalid, with: :record_invalid
-#  before_action :current_user, only: [:create]
 
     def index
-      
         tripplanners = TripPlanner.all 
         render json: tripplanners,status: :ok
     end
@@ -15,7 +13,6 @@ class TripPlannersController < ApplicationController
     end
 
     def create 
-        # user = @current_user
         tripplanner = TripPlanner.new(planner_params)
         tripplanner.user_id = session[:user_id]
         tripplanner.save!
