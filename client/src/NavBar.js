@@ -13,14 +13,11 @@ function NavBar({user,setUser}){
       <>
       
       <div className="navbar">
-      
         <ul>
-       
         <Link to = "/places">Places<MyLocationIcon fontSize="inherit"></MyLocationIcon>  </Link>
         <Link to = "/tripplanner">Trip Planner<SummarizeIcon fontSize="inherit"></SummarizeIcon></Link> 
         <Link to = "/favourites">Bucket List<FlightTakeoffIcon fontSize="inherit"></FlightTakeoffIcon></Link>
         <Link to = "/useraccount">Account<SupervisorAccountIcon fontSize="inherit"></SupervisorAccountIcon></Link> 
-       
         </ul> 
       </div> 
       

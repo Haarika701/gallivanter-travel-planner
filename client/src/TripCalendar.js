@@ -8,7 +8,7 @@ import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
 export default function TripCalendar({plan}){
 
     const [showCalendar,setShowChalender] = useState(false)
-    function  handleDateClick (arg) { // bind with an arrow function
+    function  handleDateClick (arg) { 
         alert(arg.dateStr)
       }
       function handleCalendarClick(){

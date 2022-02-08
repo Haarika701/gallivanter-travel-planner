@@ -4,9 +4,12 @@ import ThingsToDoView from "./ThingsToDoView"
 import CategoryThings from "./CategoryThings"
 import React from "react";
 export default function ThingsToRender({user}){
+
 let {destinations} = useParams()
+
     const[allThings,setAllThings] = useState([])
     const [sortBy, setSortBy] = useState("All");
+
   useEffect(() => {
      fetch(`/places/${destinations}`)
      .then(res => res.json())
@@ -15,6 +18,7 @@ let {destinations} = useParams()
          console.log(data)
      })
   },[])
+  
   const categoriesToDisplay = allThings.filter(
     (things) => things.category === sortBy || sortBy === "All"
   );
@@ -24,7 +28,6 @@ let {destinations} = useParams()
         <div className="things-render">
         <CategoryThings sortBy={sortBy} onChangeSortBy={setSortBy}/>
         <ThingsToDoView allThings={categoriesToDisplay} user = {user} />
-       
         </div>
     )
 }

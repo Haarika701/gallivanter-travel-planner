@@ -10,12 +10,6 @@ class TripsController < ApplicationController
         render json:trip,status: :created
     end
 
-    # def show
-    #     trip_planner = User.find(session[:user_id])
-    #     tripsthing = trip_planner.user
-    #     render json:tripsthing,status: :ok
-    # end
-
     private
 
     def trip_params

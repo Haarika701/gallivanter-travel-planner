@@ -95,7 +95,7 @@ export default function TripPlannerForm(){
 <>
       
        
-        <form  className="travelplanner" onSubmit={handleSubmit}>
+    <form  className="travelplanner" onSubmit={handleSubmit}>
         {errors.map((err) => (<Error key={err}>{err}</Error>))}
         <legend>Trip Details</legend>
         <NumbersIcon>
@@ -283,7 +283,7 @@ export default function TripPlannerForm(){
             />
            <br/>
             <Button variant="contained" type="submit" >Save Plan</Button>
-            </form>
+       </form>
                
                        
             </>                

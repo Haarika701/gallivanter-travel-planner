@@ -10,7 +10,6 @@ export default function SearchPlace({search,setSearch}){
               value={search}
               role="searchbox" 
               onChange={(e) => setSearch(e.target.value)}
-             
             />
        
                </form>

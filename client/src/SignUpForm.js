@@ -79,7 +79,6 @@ export default function SignupForm( {setUser, handleFormDisplay} ) {
                 value={formData.first_name}
                 onChange={handleChange}
             />
-        
            <br/>
             <BadgeIcon> 
             <label variant="outlined" htmlFor="last_name">Last Name:</label>
