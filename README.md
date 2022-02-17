@@ -31,5 +31,5 @@ Gallivanter App is designed to log in or signup as a user. Once the account is c
 
 # Deployment
 - The application is deployed on Heroku and follows CI/CD pattern.
-- https://pure-beach-28427.herokuapp.com
+- https://gallivanter-travel-planning.herokuapp.com/
 
