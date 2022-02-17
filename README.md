@@ -21,7 +21,7 @@ This project was built as a requirment to completing the final phase of our soft
  * rails s
   ``
 # App Description
-Gallivanter App is designed to log in or signup as a user. Once the account is created, the user will have access to creating trip itineraries by navigating to the trip planner section. Once the trip itineraries are created, it is available to view. Trip itineraries can be deleted as well. Signed-in users can also view various tourist destinations and attractions nearby. The search feature helps the user to search for a specific destination. With the help of sorting, "things to do " can be sorted into attractions and activities. Users can also view the Bucket list section that has all the favorites added by the user. In the end, the user can also delete the account.
+Gallivanter App is designed to log in or signup as a user. Once the account is created, the user will have access to creating trip itineraries by navigating to the trip planner section. Once the trip itineraries are created, it is available to view. Trip itineraries can be deleted as well. Signed-in users can also view various tourist destinations and attractions nearby. The search feature helps the user to search for a specific destination. With the help of sorting, "things to do " can be sorted into attractions and activities. Users can also view the Bucket list section that has all the favorites added by the user. 
 
 # Goals for more features
  - User will have the ability to view the destinations in the map
