@@ -11,7 +11,7 @@ ReactDOM.render(
     <BrowserRouter>
      <div className='header'> 
       <img src = {logo}/> 
-      <h1>Gallivanter: A Travel Itinerary App</h1>
+      <h1>Gallivanter: A Travel Planner App</h1>
       </div> 
      
     <App /> 
