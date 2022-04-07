@@ -20,6 +20,6 @@ class PlacesController < ApplicationController
 
     def show 
         places = Place.find(params[:id])
-        render json:places.things_to_do,status: :ok
+        render json:places.things_to_dos,status: :ok
     end
 end
